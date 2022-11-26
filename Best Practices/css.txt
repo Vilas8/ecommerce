@@ -1,0 +1,44 @@
+Css best Practices.
+1) Learn the css box model.
+
+2) don't use chrome to debug css. Instead use Firefox.
+   * Firefox devtools are far more superior than chrome.
+
+3) Use flexbox to align items. Only single rows or columns.
+   Eg: centering an element:
+   .flex{
+       display: flex:
+       justify-content: center; x - axis
+       align-items: center; Y - axis
+   }
+
+4) Use Grid to align items. 
+   Grid allows you to work with multiple rows and columns.
+
+   .grid{
+    display: grid;
+    grid-template-column:1fr 1fr 1fr; 3 columns
+    grid-template-row: 1fr 1fr; 2-rows
+    place-items: center; 
+   }
+
+5) When we are talking about Responsiveness 
+   we are just thinking about changing the width of elements according to the size of screen.
+
+   * This can be done using:
+    # media queries.
+      media queries might make you shoot yourself, when the projects grows larger.
+    
+   * Better way is to use:
+     min max and clamp functions
+     article{
+        width: clamp(min, preferred, max)
+     }
+
+6) For video to maintain the aspect ratio use:
+   video{
+    width:100%;
+    aspect-ratio:16/9;
+   }
+
+   

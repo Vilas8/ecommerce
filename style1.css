@@ -1,0 +1,74 @@
+:root{
+    /* --r:0;
+    --g:0;
+    --b:0;
+    --text-color:rgb(var(--r), var(--g), var(--b)) */
+}
+body{
+    margin:0;
+    font-family: Helvetica, sans-serif;
+    font-size: larger;
+}
+
+.hero{
+    background-image: url(assets/pexels-monstera-6310923.jpg);
+    height: 100vh;
+    background-size: cover;
+}
+
+header{
+    color:black;
+    padding:0.5em 3%;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header:hover{
+    background-color: black;
+    color:white;
+}
+
+nav{
+    width:max-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+a{
+    text-decoration: none ;
+    color: rgb(255, 255, 255);
+    margin:0 0.5em;
+}
+
+a:hover{
+    text-decoration: underline;
+    transition:step-start;
+}
+
+.header-features{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-features > div{
+    margin:0 15px 0 0;
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    
+}
+
+input[type='text']{
+    border:0;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    width:8em;
+    margin-left:5px;
+}
