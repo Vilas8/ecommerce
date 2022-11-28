@@ -1,0 +1,44 @@
+Best practices for writing html.
+1) Make use of semantic tags
+    EXAMPLE: <header> , <article> , <aside>, <footer> , <nav> etc
+    WHY?
+    --> It makes web pages more informative and adaptable, allowing browsers and search engines to better interpret content.
+
+2) Always specify alt, width and height for images. and give meaningful alt
+
+3) Avoid long lines. if it is long break it into smaller parts.
+   eg: <img src="img/image.jpg"
+            alt="image"
+            width="200"
+            height="300"
+
+4) Avoid unneccessary Blank lines, Spaces and indentations
+
+5) Using Consistent naming styles.
+
+6) Use comments
+
+7) Use Entities (https://www.w3schools.com/html/html_entities.asp)
+   eg: © copyright use: &copy;
+   they are characters are not found on computer keyboard such as:
+   ¥ , €, ®  etc 
+   non-breaking space   : 	&nbsp;
+
+8) Always validate your code/
+   * your code might not work properly 
+   * Run it through a validator after writing a few lines of code.
+
+   website for validation: https://validator.w3.org/nu/#file
+   open the site --> Validate from direct input--> upload your html file and Run.
+
+9) Check your code on multiple browsers.
+   * Some tags are not support by a few browsers, So make sure to check whether you code works on 
+     all the browsers and change the tags if needed.
+
+10) Testing your apps.
+    * learn the difference between unit, Integration and functional Testing.
+    * tools: cypress, playwright, enzyme, Jest.
+
+10) Practice Practice Practice  
+
+11) Learn to google search, if your stuck at something take a small break and come back to it.
