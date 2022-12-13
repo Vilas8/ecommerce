@@ -5,21 +5,25 @@
     --text-color:rgb(var(--r), var(--g), var(--b)) */
 }
 body{
+    font-size: 16px;
     margin:0;
     font-family: Helvetica, sans-serif;
     font-size: larger;
 }
 
 .hero{
-    background-image: url(assets/nimble-made-7RIMS-NMsbc-unsplash.jpg);
-    height: 100vh;
+    background-image: url(assets/jackjaspe.webp);
+    height: 90vh;
     background-size: cover;
 }
 
+
 header{
+    position: sticky;
+    top:0;
     color:white;
     padding:0em 3%;
-    background-color: transparent;
+    background-color:transparent;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,66 +43,89 @@ nav{
     justify-content: space-between;
 }
 
-a{
-    text-decoration: none ;
+nav a{
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
     color: rgb(255, 255, 255);
-    margin:0 0.5em;
-    width:fit-content;
-    font-size: medium;
+    margin:0 1em;
+    padding:.5em 0; 
+    font-size: 12px;
+}
+nav a:after{
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    left:50%;
+    position:absolute;
+    background:white;
+    transition: width 0.3s ease 0s, left 0.3s  ease 0s;
+    width:0;
 }
 
-a:hover{
-    text-decoration: underline;
-    transition:text-decoration 0.5s;
+a:hover:after{
+    width:100%;
+    left:0;
 }
 
 .header-features{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items:center;
 }
 
 .header-features > div{
-    margin:0 15px 0 0;
+    margin:0 20px 0 0;
 }
 
-.logo h2{
-    margin:0;
+#logo h3{
+    font-size: 22px;
 }
 
 .search{
     display: flex;
     align-items: center;
-    
+    gap:5px;
 }
+
 
 input[type='text']{
     border:none;
     color:white;
-    text-align: center;
+    outline:none;
+    text-align: start;
     background: transparent;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid rgb(202, 202, 202);
     width:8em;
     margin-left:5px;
+    padding:0 0 .5em 0;
 }
+
 .hero-content{
     color:white;
     padding:0 3%;
-    margin:20vh 0;
-    width:40vw;
+    margin:50px 0 20vh 0;
     display:flex;
     flex-direction: column;
-    align-items: flex-start;
+    flex-basis:fit-content;
     justify-content: center;
 }
 
+.hero-container{
+    padding:10rem 10rem 0 10rem;
+}
+
 .hero-content h1{
-    font-size: 3vw;
+    margin:0 0 50px 0;
+    font-size: 40px;
+    /* width: clamp(250px,(50px - 100vw)*(-1), 60vw); */
 }
 .hero-content button{
     color:white;
-    padding:1em 3em;
+    padding:1rem 3rem;
     background-color: transparent;
     border: solid 0.5px white;
 }
@@ -111,6 +138,71 @@ button:hover{
 
 button h3{
     margin:0;
+}
+.navbar > div{
+    display: none;
+    width:1.1em;
+    margin:0 0 .2em 0; 
+    height:4px;
+    background: white;
+}
+.navbar div:nth-child(3){
+    width:.85em;
+}
+
+@media  screen and (max-width: 850px) {
+    .header-features .search, nav{
+        display: none;
+    }
+    .navbar div{
+        display: block;
+    }
+    #logo h3{
+        font-size: 17px;
+    }
+    .hero-container{
+        padding:1rem 5rem 0 5rem;
+        width:fit-content;
+    }
+@media screen and (max-width: 768px) {
+    .hero{
+        background: url(assets/jackjaspe3.webp);
+        background-position:center;
+        background-repeat: no-repeat;
+    }
+    .hero-content button{
+        padding:.5rem 2rem;
+    }
+    .hero-content h1{
+        font-size: 30px;
+    }
+    .hero-content h6{
+        font-size: 10px;
+    }
+@media screen and (max-width: 600px){
+    .hero{
+        background: url(assets/jackjaspe2.jpg);
+        background-size: cover;
+    }
+    .hero-container{
+        padding:5rem 5rem 0 1rem;
+    }
+}
+@media screen and (max-width: 350px) {
+    #logo h3{
+        font-size:15px;
+    }
+    .hero-content h1{
+         font-size:25px;
+    }
+    .hero-content button{
+        padding: .3rem 1rem;
+        font-size:10px;
+    }
+}
+
+    
+}
 }
 /* End of main section */
 
@@ -141,7 +233,7 @@ footer{
 }
 
 footer > section{
-    flex:max(300px, 100%/5 + 0.1%);
+    flex:max(250px, 100%/5 + 0.1%);
     
 }
 
@@ -173,6 +265,7 @@ h6{
 
 .about a, .Socials a{
     margin:0 0 0.4em 0;
+    font-size: medium;
 }
 
 input[type='email']{
