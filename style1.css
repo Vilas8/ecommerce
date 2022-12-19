@@ -77,7 +77,7 @@ a:hover:after{
 }
 
 .header-features > div{
-    margin:0 20px 0 0;
+    margin:0  0 0 20px;
 }
 
 #logo h3{
@@ -216,20 +216,22 @@ button h3{
     padding:3rem 3%;
     background-color: black;
     display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap:10px;
+    flex-flow:row wrap;
+    justify-content: space-between;
 
 }
 
 .products li{
+   flex-basis:32.44444%;
+   margin:0 0 15px 0;
    background:rgb(41, 41, 41);
-   height:fit-content;
-   width:fit-content;
-   padding:10px;
 }
 a{
     text-decoration: solid;
+}
+figure{
+    padding:17px;
+    /* margin:0 auto; */
 }
 
 .items b{
@@ -247,15 +249,16 @@ a{
 }
 .items h3{
     margin:20px 40px;
-    text-decoration:solid;
+    text-decoration:underline;
     color:white;
     font-size: 20px;
 }
 figure img {
    width:100%;
    height:auto;
-   max-width: 300px;
+   max-width: 350px;
 }
+
 .title {
    font-size:.8em;
    color: white;
@@ -280,6 +283,43 @@ figure img {
 .shop-link:hover{
     text-decoration: underline;
     
+}
+
+@media screen and (max-width:950px) {
+    .products{
+        padding:1rem 3%;
+    }
+
+    .products li{
+        flex-basis:49.333%;
+        justify-content: center;
+    }
+    .items h3{
+        display: none;
+    }
+    .shop-link{
+        display:none;
+    }
+    figure{
+        margin:0;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .products{
+        padding:0;
+        background-color: rgb(41, 41, 41);
+    }
+    .products li{
+        margin:0 0 8px 0;
+        align-items:center;
+    }
+    .title{
+        font-size:10px;
+    }
+    .subtitle{
+        font-size: 8px;
+    }
 }
 
 /* Footer */
