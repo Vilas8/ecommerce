@@ -17,7 +17,6 @@ body{
     background-size: cover;
 }
 
-
 header{
     position: sticky;
     top:0;
@@ -192,11 +191,15 @@ button h3{
     #logo h3{
         font-size:15px;
     }
+    .hero-container{
+        padding:15rem 5rem 0 1rem ;
+    }
     .hero-content h1{
          font-size:25px;
+         margin:0 0 1.5rem 0;
     }
     .hero-content button{
-        padding: .3rem 1rem;
+        padding: .5rem 1.2rem;
         font-size:10px;
     }
 }
@@ -206,20 +209,77 @@ button h3{
 }
 /* End of main section */
 
+
 .products{
-    padding:1em 3%;
+    color:white;
+    font-size:16px;
+    padding:3rem 3%;
     background-color: black;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 30em);
-    gap:1em;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap:10px;
+
 }
-.products > div{
-    display:grid;
-    grid-template-columns: repeat(auto-fit, min-max(15em, 1fr));
-    grid-template-rows: repeat(auto-fit, min-max(10em, 1fr));
-    background-color: rgb(48, 47, 47);
-    padding:1.5em 1em;
+
+.products li{
+   background:rgb(41, 41, 41);
+   height:fit-content;
+   width:fit-content;
+   padding:10px;
+}
+a{
+    text-decoration: solid;
+}
+
+.items b{
+    padding:1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.items span{
+    margin:3px 0;
+}
+
+.items{
+    display:flex;
+    flex-direction: column;
+}
+.items h3{
+    margin:20px 40px;
+    text-decoration:solid;
+    color:white;
+    font-size: 20px;
+}
+figure img {
+   width:100%;
+   height:auto;
+   max-width: 300px;
+}
+.title {
+   font-size:.8em;
+   color: white;
+   font-family:Helvetica;
+}
+.subtitle{
+    font-size:.7em;
+    font-weight: lighter;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+}
+.sale-price{
+    color:rgb(241, 106, 106);
+    font-size:.6em;
+}
+.shop-link{
+    text-align: right;
+    transition:.5s ease-in-out;
+    font-size:medium;
+    font-family:'Courier New', Courier, monospace;
+}
+.shop-link:hover{
+    text-decoration: underline;
+    
 }
 
 /* Footer */
