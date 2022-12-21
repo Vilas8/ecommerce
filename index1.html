@@ -25,7 +25,7 @@
             <div class="header-features">
                 <div class="search">
                     <img src="assets/free_icon_1.svg" alt="search bar" width="15" height="15">
-                    <input type="text"></input>
+                    <input type="text" class="main-search"></input>
                 </div>
                 <div class="account">
                     <img src="assets/account-new.svg" alt="account" width="15" height="15">
@@ -53,6 +53,34 @@
     <!-- 
         End of hero section and header 
      -->
+     <section class="user-signup">
+        <div class="signup-heading">
+            <span id="cross-mark" >&#9587;</span>
+            <h1>Your Account</h1>
+            <span></span>
+        </div>   
+        <div class="signup-options">
+            <h4>LOG IN</h4>
+            <h4>REGISTER</h4>
+        </div> 
+            <section class="signup">
+                <form action="" method="get">
+                    <label for="fname">FIRST NAME</label><br>
+                    <input type="text" name="firstname" id="text-input" placeholder="FIRST NAME" class="form-inputs" required>
+                    <label for="lname">LAST NAME</label>
+                    <input type="text" name="lastname" id="text" placeholder="LAST NAME" class="form-inputs" >
+                    <label for="email">EMAIL ADDRESS</label><br>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required>
+                    <input type="submit" value="REGISTER" class="submit-btn">
+                </form>
+            </section>
+            <section class="log-in"></section>
+     </section>
+     <!-- 
+        End of sign-up form
+      -->
     <section class="products">
         <li class="items">
             <a href=""><h3>Shirts</h3></a>
@@ -223,7 +251,7 @@
         <section class="subscribe">
             <h5>HEY!</h5>
             <p>Enter your email to stay in the loop on new collections, pop-up shows and more.</p>
-            <input type="email" name="email" id="email" placeholder="Enter your Email Address"><br>
+            <input type="email" name="email" id="email" placeholder="Enter your Email Address" class="footer-email"><br>
             <button>SUBSCRIBE</button>
         </section>
     </footer>
