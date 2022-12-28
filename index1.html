@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home Page</title>
     <link rel="stylesheet" href="style1.css" />
+    
 </head>
 
 <body>
@@ -60,8 +61,8 @@
             <span></span>
         </div>   
         <div class="signup-options">
-            <h4>LOG IN</h4>
-            <h4>REGISTER</h4>
+            <h4 id="log-in" onclick="func1()">LOG IN</h4>
+            <h4 id="sign-up" onclick="func2()">REGISTER</h4>
         </div> 
             <section class="signup">
                 <form action="" method="get">
@@ -76,7 +77,15 @@
                     <input type="submit" value="REGISTER" class="submit-btn">
                 </form>
             </section>
-            <section class="log-in"></section>
+            <section class="log-in">
+                <form action="" method="get">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required>
+                    <input type="submit" value="LOG IN" class="submit-btn">
+                </form>
+            </section>
      </section>
      <!-- 
         End of sign-up form
@@ -199,11 +208,11 @@
             <figure class="textured-tops">
                 <div class="feat-content">
                     <a href=""><h1>Textured Tops</h1></a>
-                     <p class="para">Legendary flannels and classical shirts - 
+                     <p class="para" id="para-1">Legendary flannels and classical shirts - 
                         built from responsibe materials, designed to take on fall,
                         winter and whatever else you throw at them
                      </p>
-                     <button type="submit" class="shop-btn">
+                     <button type="submit" class="shop-btn" onclick="changeContent()">
                         <h3>SHOP SHIRTS</h3>
                     </button>
                 </div>
@@ -258,6 +267,7 @@
     <!-- 
         end of footer 
      -->
+    <script src="app.js"></script>
 </body>
 
 </html>

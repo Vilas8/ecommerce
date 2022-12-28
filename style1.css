@@ -341,6 +341,9 @@ figure img {
     font-family:'Helvetica Neue', sans-serif;
     margin:0 0 2rem 0;
 }
+.signup{
+    display: none;
+}
 
 .signup-heading h1{
    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -386,7 +389,7 @@ label{
     font-size:large;
     font-weight: light;
     border:0;
-}
+}       
 
 
 
@@ -485,6 +488,7 @@ label{
 /* 
            FOOTER
 */
+
 footer{
     background-color: rgb(0, 0, 0);
     padding:20px 3%;
@@ -538,7 +542,8 @@ h6{
     padding:1em 0;
     outline:none;
     background-color: transparent;
-    border:1px solid white;
+    border: 3px solid;
+    border-image:linear-gradient(45deg, #4158D0, #C850C0, #FFCC70) 1;
     color:white;
     font-weight: bolder;
     text-align: center;
