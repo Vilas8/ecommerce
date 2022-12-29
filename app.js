@@ -1,7 +1,15 @@
+let count = 1;
+const inival = "Legendary flannels and classical shirts - built from responsibe materials, designed to take on fall, winter and whatever else you throw at them";
 function changeContent(){
-    const a = document.querySelector(".para").innerHTML =
-    "Comfortable & Funclothing for people who value ournatural resources"
-    console.log(a)
+    if(count == 1){
+        document.querySelector(".para").innerHTML =
+        "Comfortable & Funclothing for people who value ournatural resources";
+    }
+    else{
+        document.querySelector(".para").innerHTML = inival;
+    }
+    count = (count == 1) ? 0:1;
+    
 }
 
 
