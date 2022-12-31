@@ -1,9 +1,3 @@
-:root{
-    /* --r:0;
-    --g:0;
-    --b:0;
-    --text-color:rgb(var(--r), var(--g), var(--b)) */
-}
 body{
     font-size: 16px;
     margin:0;
@@ -18,8 +12,9 @@ body{
 }
 
 header{
-    position: sticky;
+    position:fixed;
     top:0;
+    width:95%;
     color:white;
     padding:0em 3%;
     background-color:transparent;
@@ -106,7 +101,7 @@ a:hover:after{
 .hero-content{
     color:white;
     padding:0 3%;
-    margin:50px 0 20vh 0;
+    /* margin:50px 0 20vh 0; */
     display:flex;
     flex-direction: column;
     flex-basis:fit-content;
@@ -115,6 +110,7 @@ a:hover:after{
 
 .hero-container{
     padding:10rem 10rem 0 10rem;
+    margin:10rem 0 0 0;
 }
 
 .hero-content h1{
@@ -193,6 +189,7 @@ button h3{
     }
     .hero-container{
         padding:15rem 5rem 0 1rem ;
+        margin:8rem 0 0 0;
     }
     .hero-content h1{
          font-size:25px;
@@ -386,9 +383,7 @@ label{
     font-weight: lighter;
 }
 .submit-btn{
-    margin:1rem 0 0 0;
-    padding:1rem 2rem;
-    width:100%;
+    width:95%;
     background-color: black;
     color:white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
