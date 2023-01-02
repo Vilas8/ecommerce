@@ -26,15 +26,46 @@ function func2(){
     document.querySelector(".log-in").style.display="none";
 }
 
-// Function to display log-in section on click
+// Function to display log-in  section on click
 
 function userAuth(){
     document.querySelector('.user-signup').style.display="block";
+    document.body.style.opacity='.8';
+    document.body.style.overflow='hidden';
 }
 
 function loginClose(){
     document.querySelector('.user-signup').style.display="none";
+    document.body.style.opacity='initial';
+    document.body.style.overflow='initial';
 }
+
+// Fuctions to display navigation-links on mobile and tablet;
+let dis = 0;
+document.querySelector('.navbar').addEventListener('click', showNav);
+let navbar = document.querySelector('.navigation-tablets-mobile')
+function showNav(){
+    console.log(dis)
+    navbar.style.display='flex';
+    dis = 1;
+    document.body.style.opacity='.8';
+    document.body.style.overflow='hidden';
+}
+
+const exclude = document.querySelectorAll('section:not(.navigation-tablets-mobile');
+// console.log(exclude);
+// exclude.addEventListener('click', hideNav)
+
+function hideNav(){
+    if(dis == 1){
+        console.log(dis);
+        navbar.style.display="none";
+        document.body.style.opacity='1';
+        document.body.style.overflow='initial';
+        dis = 0;
+    }
+}
+
 
 
 // adding background color to navbar while scrolling.
@@ -56,8 +87,7 @@ window.addEventListener("scroll", function(){
         header.style.background="initial";
         header.style.color="white";
     }
-
-    
+ 
 });
 
 

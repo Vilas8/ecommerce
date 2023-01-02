@@ -325,7 +325,7 @@ figure img {
 
 .user-signup{
     display:none;
-    position: absolute;
+    position: fixed;
     z-index: 1;
     top:0;
     right:0;
@@ -392,6 +392,58 @@ label{
     border:0;
 }       
 
+/* 
+          NAVIGATION FOR TABLETS AND MOBILES.
+*/
+.navigation-tablets-mobile{
+    position:fixed;
+    top:0;
+    right:0;
+    z-index:2;
+    width:320px;
+    height:100vh;
+    background-color: white;
+    display:none;
+    justify-content: center;
+
+}
+.nav-container{
+    width:250px;
+    display:flex;
+    flex-direction: column;
+    
+}
+.search-container{
+    margin:30px 0 0 0;
+}
+.nav-tablets{
+    display:flex;
+    flex-direction: column;
+    margin:30px 0 0 0;
+}
+.nav-tablets > *{
+    color:black;
+}
+
+.search-tablets{
+    width:80%;
+    border: none;
+    padding:0;
+}
+.search-tablets::placeholder{
+    color:rgb(80, 79, 79);
+    margin:5px 0 0 15px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing:1px;
+}
+.line{
+   margin:20px 0 0 0;
+   height:0.1px;
+   background: rgb(173, 173, 173);
+   
+}
 
 
 
