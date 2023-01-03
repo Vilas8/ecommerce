@@ -52,9 +52,15 @@ function showNav(){
     document.body.style.overflow='hidden';
 }
 
-const exclude = document.querySelectorAll('section:not(.navigation-tablets-mobile');
-// console.log(exclude);
-// exclude.addEventListener('click', hideNav)
+let sections = document.querySelectorAll('section:not(.navigation-tablets-mobile');
+
+
+sections.forEach(section => {
+    section.addEventListener('click', hideNav);
+});
+ 
+
+
 
 function hideNav(){
     if(dis == 1){
@@ -89,6 +95,7 @@ window.addEventListener("scroll", function(){
     }
  
 });
+
 
 
 
