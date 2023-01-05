@@ -8,11 +8,10 @@
     <title>Home Page</title>
     <link rel="stylesheet" href="style1.css" />
 </head>
-
 <body>
     <main class="hero">
-        <header class="header">
-            <nav>
+        <header class="header" onscroll="scrHeight()" >
+            <nav class="nav">
                 <a href="shop.html">SHOP</a>
                 <a href="About.html">ABOUT</a>
                 <a href="contact.html">CONTACT</a>
@@ -25,9 +24,9 @@
             <div class="header-features">
                 <div class="search">
                     <img src="assets/free_icon_1.svg" alt="search bar" width="15" height="15">
-                    <input type="text"></input>
+                    <input type="text" class="main-search"></input>
                 </div>
-                <div class="account">
+                <div class="account" onclick="userAuth()">
                     <img src="assets/account-new.svg" alt="account" width="15" height="15">
                 </div>
                 <div class="cart">
@@ -52,6 +51,61 @@
     </main>
     <!-- 
         End of hero section and header 
+     -->
+     <section class="user-signup">
+        <div class="signup-heading">
+            <span id="cross-mark" onclick="loginClose()">&#9587;</span>
+            <h1>Your Account</h1>
+            <span></span>
+        </div>   
+        <div class="signup-options">
+            <h4 id="log-in" onclick="func1()">LOG IN</h4>
+            <h4 id="sign-up" onclick="func2()">REGISTER</h4>
+        </div> 
+            <section class="signup">
+                <form action="" method="get">
+                    <label for="fname">FIRST NAME</label><br>
+                    <input type="text" name="firstname" id="text-input" placeholder="FIRST NAME" class="form-inputs" required>
+                    <label for="lname">LAST NAME</label>
+                    <input type="text" name="lastname" id="text" placeholder="LAST NAME" class="form-inputs" >
+                    <label for="email">EMAIL ADDRESS</label><br>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required>
+                    <input type="submit" value="REGISTER" class="submit-btn form-inputs">
+                </form>
+            </section>
+            <section class="log-in">
+                <form action="" method="get">
+                    <label for="email">EMAIL</label>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required>
+                    <label for="password">PASSWORD</label>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required>
+                    <input type="submit" value="LOG IN" class="submit-btn form-inputs">
+                </form>
+            </section>
+     </section>
+     <!-- 
+           End of sign-up form
+      -->
+      <section class="navigation-tablets-mobile">
+        <div class="nav-container">
+            <div class="search-container">
+                <div class="search">
+                    <img src="assets/reshot-icon-search-A9YDCG5E73.svg" alt="search bar" width="22" height="22">      
+                    <input type="text" class="main-search search-tablets" placeholder="SEARCH"></input>
+                </div>
+                <hr class="line" size="1">
+            </div>
+        <nav class="nav-tablets nav">
+            <a href="shop.html">SHOP</a>
+            <a href="About.html">ABOUT</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </div>
+    </section>
+    <!-- 
+          End of navigation page for tablets and mobiles.
      -->
     <section class="products">
         <li class="items">
@@ -163,6 +217,7 @@
             </figure>
         </li>
     </section>
+    
     <!-- 
         End of product section
       -->
@@ -171,11 +226,11 @@
             <figure class="textured-tops">
                 <div class="feat-content">
                     <a href=""><h1>Textured Tops</h1></a>
-                     <p class="para">Legendary flannels and classical shirts - 
+                     <p class="para" id="para-1">Legendary flannels and classical shirts - 
                         built from responsibe materials, designed to take on fall,
                         winter and whatever else you throw at them
                      </p>
-                     <button type="submit" class="shop-btn">
+                     <button type="submit" class="shop-btn" onclick="changeContent()">
                         <h3>SHOP SHIRTS</h3>
                     </button>
                 </div>
@@ -223,13 +278,14 @@
         <section class="subscribe">
             <h5>HEY!</h5>
             <p>Enter your email to stay in the loop on new collections, pop-up shows and more.</p>
-            <input type="email" name="email" id="email" placeholder="Enter your Email Address"><br>
+            <input type="email" name="email" id="email" placeholder="Enter your Email Address" class="footer-email"><br>
             <button>SUBSCRIBE</button>
         </section>
     </footer>
     <!-- 
         end of footer 
      -->
+    <script src="app.js"></script>
 </body>
 
 </html>
