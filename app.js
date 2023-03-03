@@ -14,8 +14,9 @@ function changeContent(){
     
 }
 
-// functions to show log-in and signup part when user clicks on it.
+let dis = 0;
 
+// functions to show log-in and signup part when user clicks on it.
 function func1(){
     document.querySelector('.log-in').style.display="initial";
     document.querySelector('.signup').style.display="none";
@@ -40,50 +41,40 @@ function loginClose(){
     document.body.style.overflow='initial';
 }
 
+
 // Fuctions to display navigation-links on mobile and tablet;
-let dis = 0;
-document.querySelector('.navbar').addEventListener('click', showNav);
-let navbar = document.querySelector('.navigation-tablets-mobile')
 function showNav(){
     console.log(dis)
-    navbar.style.display='flex';
+    document.querySelector('.navigation-tablets-mobile').style.display='flex';
     dis = 1;
     document.body.style.opacity='.8';
     document.body.style.overflow='hidden';
+    sections = document.querySelectorAll('section:not(.navigation-tablets-mobile');
+    // console.log(sections);
+    sections.forEach(section => {
+        section.addEventListener('click', hideNav);
+    });
 }
-
-let sections = document.querySelectorAll('section:not(.navigation-tablets-mobile');
-
-
-sections.forEach(section => {
-    section.addEventListener('click', hideNav);
-});
- 
-
 
 
 function hideNav(){
     if(dis == 1){
         console.log(dis);
-        navbar.style.display="none";
+        document.querySelector('.navigation-tablets-mobile').style.display="none";
         document.body.style.opacity='1';
         document.body.style.overflow='initial';
         dis = 0;
     }
 }
 
-
-
 // adding background color to navbar while scrolling.
-
-const nav = this.document.querySelector('.nav');
-const header = document.querySelector('.header');
-
 
 window.addEventListener("scroll", function(){
     let scrHeight = window.scrollY;
+    let header = document.querySelector('.header')
+    // console.log(header);
 
-    console.log(scrHeight);
+    // console.log(scrHeight);
     
     if (scrHeight > 200){
         header.style.background="rgb(41,41,41)";
@@ -95,7 +86,3 @@ window.addEventListener("scroll", function(){
     }
  
 });
-
-
-
-
