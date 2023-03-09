@@ -6,7 +6,7 @@ body {
 }
 
 .hero {
-    background-image: url(assets/jackjaspe.webp);
+    background-image: url(/assets/jackjaspe.webp);
     height: 90vh;
     background-size: cover;
 }
@@ -172,7 +172,7 @@ button h3 {
 
     @media screen and (max-width: 768px) {
         .hero {
-            background: url(assets/jackjaspe3.webp);
+            background: url(/assets/jackjaspe3.webp);
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -496,10 +496,6 @@ label {
 
 }
 
-
-
-
-
 /* 
            PRODUCT FEATURE SECTION
 */
@@ -540,12 +536,12 @@ label {
 }
 
 .textured-tops {
-    background: url(assets/textured_tops_homepage.webp);
+    background: url(/assets/textured_tops_homepage.webp);
     background-size: cover;
 }
 
 .solicit {
-    background: url(assets/solstice_staples_homepage.webp);
+    background: url(/assets/solstice_staples_homepage.webp);
     background-size: cover;
 }
 
@@ -576,12 +572,12 @@ label {
     }
 
     .textured-tops {
-        background: url(assets/textured_tops_900px.webp);
+        background: url(/assets/textured_tops_900px.webp);
         background-size: cover;
     }
 
     .solicit {
-        background: url(assets/solstice_staples_900px.webp);
+        background: url(/assets/solstice_staples_900px.webp);
         background-size: cover;
     }
 
