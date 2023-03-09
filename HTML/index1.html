@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -9,7 +8,34 @@
     <link rel="stylesheet" href="/CSS/style1.css"/>
 </head>
 <body>
-    <main class="hero">
+    <aside class="mobile-navigation">
+        <div class="search">
+            <img src="/assets/Search.svg" alt="search bar" width="25" height="25" class="search-sym">
+            <input type="text" class="main-search" placeholder="SEARCH"></input>
+        </div>
+        <nav >
+            <ul>
+                <li class="shop"><a href="shop.html">SHOP</a>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 8.96967C16.8232 9.26256 16.8232 9.73744 16.5303 10.0303L12.5303 14.0303C12.2374 14.3232 11.7626 14.3232 11.4697 14.0303L7.46967 10.0303C7.17678 9.73744 7.17678 9.26256 7.46967 8.96967C7.76256 8.67678 8.23744 8.67678 8.53033 8.96967L12 12.4393L15.4697 8.96967C15.7626 8.67678 16.2374 8.67678 16.5303 8.96967Z" fill="black"/>
+                    </svg>     
+            </li>
+            <li><a href="About.html">ABOUT</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        <ol class="collections">
+            <li><a href="">shirts</a></li>
+            <li><a href="">Bottoms</a></li>
+            <li><a href="">Outwear</a></li>
+            <li><a href="">Knits</a></li>
+            <li><a href="">Accessories</a></li>
+            <li><a href="">Denim</a></li>
+        </ol>
+            
+        </nav>
+    </aside>
+    <div class="main-container">
+    <main class="hero bd">
         <header class="header" onscroll="scrHeight()" >
             <nav class="nav">
                 <a href="shop.html">SHOP</a>
@@ -19,12 +45,12 @@
             <div id="logo">
                 <!-- <img src="/assets/logo.png" alt="logo" width="300" height="75" /> -->
                 <!-- <img src="/assets/new_logo_1_-removebg-preview.png" alt="logo" width="150" height="75" /> -->
-                <h3>BLACK MARKET</h3>
+                <h3 >BLACK MARKET</h3>
             </div>
             <div class="header-features">
                 <div class="search">
                     <img src="/assets/free_icon_1.svg" alt="search bar" width="15" height="15">
-                    <input type="text" class="main-search" ></input>
+                    <input type="text" class="main-search"></input>
                 </div>
                 <div class="account" onclick="userAuth()">
                     <img src="/assets/account-new.svg" alt="account" width="15" height="15">
@@ -57,7 +83,8 @@
             <span id="cross-mark" onclick="loginClose()">&#9587;</span>
             <h1>Your Account</h1>
             <span></span>
-        </div>   
+        </div>  
+        <div class="user-container">
         <div class="signup-options">
             <h4 id="log-in" onclick="func1()">LOG IN</h4>
             <h4 id="sign-up" onclick="func2()">REGISTER</h4>
@@ -65,48 +92,30 @@
             <section class="signup">
                 <form action="" method="get">
                     <label for="fname">FIRST NAME</label><br>
-                    <input type="text" name="firstname" id="text-input" placeholder="FIRST NAME" class="form-inputs" required>
-                    <label for="lname">LAST NAME</label>
-                    <input type="text" name="lastname" id="text" placeholder="LAST NAME" class="form-inputs" >
+                    <input type="text" name="firstname" id="text-input" placeholder="FIRST NAME" class="form-inputs" required><br>
+                    <label for="lname">LAST NAME</label><br>
+                    <input type="text" name="lastname" id="text" placeholder="LAST NAME" class="form-inputs" ><br>
                     <label for="email">EMAIL ADDRESS</label><br>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required>
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required><br>
+                    <label for="password">PASSWORD</label><br>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required><br>
                     <input type="submit" value="REGISTER" class="submit-btn form-inputs">
                 </form>
             </section>
             <section class="log-in">
                 <form action="" method="get">
-                    <label for="email">EMAIL</label>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required>
-                    <label for="password">PASSWORD</label>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required>
+                    <label for="email">EMAIL</label><br>
+                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required><br>
+                    <label for="password">PASSWORD</label><br>
+                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required><br>
                     <input type="submit" value="LOG IN" class="submit-btn form-inputs">
                 </form>
             </section>
+        </div> 
      </section>
      <!-- 
            End of sign-up form
       -->
-      <section class="navigation-tablets-mobile">
-        <div class="nav-container">
-            <div class="search-container">
-                <div class="search">
-                    <img src="/assets/reshot-icon-search-A9YDCG5E73.svg" alt="search bar" width="22" height="22">      
-                    <input type="text" class="main-search search-tablets" placeholder="SEARCH"></input>
-                </div>
-                <hr class="line" size="1">
-            </div>
-        <nav class="nav-tablets nav">
-            <a href="shop.html">SHOP</a>
-            <a href="About.html">ABOUT</a>
-            <a href="contact.html">CONTACT</a>
-        </nav>
-    </div>
-    </section>
-    <!-- 
-          End of navigation page for tablets and mobiles.
-     -->
     <section class="products">
         <li class="items">
             <a href=""><h3>Shirts</h3></a>
@@ -282,6 +291,7 @@
             <button>SUBSCRIBE</button>
         </section>
     </footer>
+</div>
     <!-- 
         end of footer 
      -->
