@@ -1,0 +1,46 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/product.css" />
+    <title>Shop</title>
+  </head>
+  <body class="bg-light_Navy">
+    <header class="header flex flex-row justify-between items-center pl-5 pr-5 h-12 text-white gap-4 fixed top-0 w-screen z-10" onscroll="scrHeight()" >
+      <nav class="nav hidden md:flex flex-row gap-5 h-6 align-text-bottom">
+          <a href="shop.html " class="border-b-0 hover:border-b-2 transition-border ease-in duration-500">SHOP</a>
+          <a href="About.html" class="border-b-0 hover:border-b-2 transition-border ease-in duration-500">ABOUT</a>
+          <a href="contact.html" class="border-b-0 hover:border-b-2 transition-border ease-in duration-500">CONTACT</a>
+      </nav>
+      
+      <div id="logo">
+          <h3 class="text-lg font-avenirNext md:text-2xl">BLACK MARKET</h3>
+      </div>
+      <div class="header-features flex flex-row gap-5 items-center justify-end max-[600px]:gap-3">
+          <div class="search hidden md:flex flex-row gap-1 items-center ">
+              <img src="/assets/free_icon_1.svg" alt="search bar" class=" h-5 w-5 " >
+              <input type="text" class="main-search bg-transparent border-b-2 w-36 outline-none"></input>
+          </div>
+          <div class="account" onclick="userAuth()">
+              <img src="/assets/account-new.svg" alt="account" class="w-5 h-5">
+          </div>
+          <div class="cart">
+              <img src="/assets/cart.svg" alt="cart" class="w-5 h-5">
+          </div>
+          <div class="navbar md:hidden">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.75 12C19.75 11.5858 19.4142 11.25 19 11.25H5C4.58579 11.25 4.25 11.5858 4.25 12C4.25 12.4142 4.58579 12.75 5 12.75H19C19.4142 12.75 19.75 12.4142 19.75 12Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.75 7C19.75 6.58579 19.4142 6.25 19 6.25H5C4.58579 6.25 4.25 6.58579 4.25 7C4.25 7.41421 4.58579 7.75 5 7.75H19C19.4142 7.75 19.75 7.41421 19.75 7Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.75 17C19.75 16.5858 19.4142 16.25 19 16.25H5C4.58579 16.25 4.25 16.5858 4.25 17C4.25 17.4142 4.58579 17.75 5 17.75H19C19.4142 17.75 19.75 17.4142 19.75 17Z" fill="white"/>
+              </svg>
+          </div>
+      </div>
+  </header>
+  <section class="header-image relative">
+    <img src="/ProductAssets/men's-shirt-header.webp" alt="shirt-header image" srcset="" class="w-fit h-48 md:h-fit max-h-80 object-cover">
+    <span class="text-white font-avenirNext absolute top-28 left-12 text-xl md:text-2xl md:left-1/4 md:top-1/2">Men's Shirts</span>
+  </section>
+    <script src="/JavaScript/product.js"></script>
+  </body>
+</html>
