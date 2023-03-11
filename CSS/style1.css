@@ -15,6 +15,7 @@ header {
     position: fixed;
     top: 0;
     width: 95%;
+    overflow: visible;
     color: white;
     padding: 0em 3%;
     background-color: transparent;
@@ -31,13 +32,13 @@ header:hover {
     transition: background-color 0.5s;
 }
 
-nav {
+.nav {
     width: max-content;
     display: flex;
     justify-content: space-between;
 }
 
-nav a {
+.nav a {
     display: inline-block;
     position: relative;
     font-weight: bold;
@@ -46,9 +47,10 @@ nav a {
     margin: 0 1em;
     padding: .5em 0;
     font-size: 12px;
+    cursor: pointer;
 }
 
-nav a:after {
+.nav a:after {
     background: none repeat scroll 0 0 transparent;
     content: "";
     display: block;
@@ -74,6 +76,7 @@ a:hover:after {
 
 .header-features>div {
     margin: 0 0 0 20px;
+    cursor: pointer;
 }
 
 #logo h3 {
@@ -153,7 +156,7 @@ button h3 {
 @media screen and (max-width: 850px) {
 
     .header-features .search,
-    nav {
+    .nav {
         display: none;
     }
 
@@ -189,9 +192,14 @@ button h3 {
             font-size: 10px;
         }
 
+        .header-features>div {
+            margin: 0 20px 0 0;
+            cursor: pointer;
+        }
+
         @media screen and (max-width: 600px) {
             .hero {
-                background: url(assets/jackjaspe2.jpg);
+                background: url(/assets/jackjaspe2.jpg);
                 background-size: cover;
             }
 
@@ -335,9 +343,9 @@ figure img {
     }
 }
 
-@media screen and (max-width:500px) {
+@media screen and (max-width:768px) {
     .products {
-        padding: 0;
+        padding: 20px 0 0 0;
         background-color: rgb(41, 41, 41);
     }
 
@@ -355,34 +363,161 @@ figure img {
     }
 }
 
+
+/* 
+        mobile - navigation
+*/
+.mobile-navigation {
+    box-sizing: border-box;
+    width: clamp(300px, 40%, 400px);
+    height: 100vh;
+    background: white;
+    position: fixed;
+    top: 0;
+    right: -500px;
+    padding: 40px;
+    z-index: 4;
+    transition: all 1s ease;
+}
+
+.mobile-navigation .search {
+    position: relative;
+    height: 50px;
+    border-bottom: .5px solid rgba(218, 218, 218, 0.781);
+}
+
+.mobile-navigation .search.border-effect {
+    border-bottom: 1px solid black;
+}
+
+.mobile-navigation .line1 {
+    height: 0.01px;
+    background-color: rgba(179, 179, 179, 0.342);
+}
+
+.mobile-navigation .search-sym {
+    font-weight: 900;
+    margin: 0 10px 0 0;
+}
+
+.mobile-navigation .search-sym.move-right {
+    position: absolute;
+    right: 0;
+}
+
+.mobile-navigation .main-search {
+    color: black;
+    border: none;
+    margin: 5px 0 0 0;
+    letter-spacing: 1px;
+}
+
+.mobile-navigation .main-search:focus {
+    outline: none;
+}
+
+
+.mobile-navigation .main-search::placeholder {
+    color: black;
+    font-size: 10px;
+}
+
+.mobile-navigation nav {
+    flex-direction: column;
+    margin: 30px 0 0 0;
+}
+
+.mobile-navigation nav a {
+    color: black;
+    font-size: 15px;
+    font-weight: 400;
+    height: 24px;
+    align-items: center;
+
+}
+
+.mobile-navigation ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-navigation ul li {
+    display: flex;
+    align-items: start;
+    padding: 5px 0;
+}
+
+.mobile-navigation ul li:hover a {
+    color: rgb(115, 209, 209);
+}
+
+.mobile-navigation ul li:hover svg path {
+    fill: rgb(115, 209, 209);
+}
+
+.mobile-navigation ul li a {
+    margin: 0 5px 0 0;
+    padding: 0;
+    height: 24px;
+}
+
+.mobile-navigation .collections {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    column-count: 2;
+}
+
+.mobile-navigation .collections li {
+    padding: 0 0 0 20px;
+    margin: 0 0 10px 0;
+}
+
+.collections a:hover {
+    color: rgb(115, 209, 209);
+}
+
 /* 
            SIGN-IN AND SIGN-UP SECTION
 */
+.user-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
 
 .user-signup {
-    display: none;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0;
-    height: 80vh;
-    width: 320px;
+    right: -500px;
+    height: 100vh;
+    width: clamp(320px, 40%, 400px);
     background-color: rgb(255, 255, 255);
-    padding: 0 3% 1em 3%;
+    transition: all 0.5s ease;
 }
 
 .signup-heading {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     font-family: 'Helvetica Neue', sans-serif;
     margin: 0 0 2rem 0;
 }
 
-.signup {
+.log-in {
     display: none;
 }
+
+
 
 .signup-heading h1 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -391,11 +526,14 @@ figure img {
 
 #cross-mark {
     font-weight: bolder;
+    cursor: pointer;
 }
 
 .signup-options {
     display: flex;
     flex-flow: row wrap;
+    cursor: pointer;
+    margin: 0 100px 0 0;
 }
 
 .signup-options h4 {
@@ -417,6 +555,7 @@ label {
     margin: 5px 0 1rem 0;
     border: 0;
     width: 85%;
+    min-width: 200px;
     outline: none;
     background-color: rgb(231, 231, 231);
 }
@@ -428,36 +567,13 @@ label {
 }
 
 .submit-btn {
-    width: 95%;
+    width: clamp(232px, 85%, 281px);
     background-color: black;
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: large;
     font-weight: light;
     border: 0;
-}
-
-/* 
-          NAVIGATION FOR TABLETS AND MOBILES.
-*/
-.navigation-tablets-mobile {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    width: 320px;
-    height: 100vh;
-    background-color: white;
-    display: none;
-    justify-content: center;
-
-}
-
-.nav-container {
-    width: 250px;
-    display: flex;
-    flex-direction: column;
-
 }
 
 .search-container {
@@ -646,9 +762,13 @@ h6 {
     flex-direction: column;
 }
 
-.about a,
+.about a {
+    margin: 0 0 10px 0;
+    cursor: pointer;
+}
+
 .Socials a {
-    margin: 0 0 0.4em 0;
+    margin: 0 20px 0 0;
     font-size: medium;
 }
 
@@ -677,4 +797,17 @@ footer button {
     background-color: transparent;
     color: white;
     align-items: center;
+}
+
+/*    Repeated Classes   */
+.gradient-color {
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blur {
+    filter: blur(5px);
 }
