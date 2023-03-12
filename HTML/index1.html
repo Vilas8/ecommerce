@@ -30,10 +30,46 @@
             <li><a href="">Knits</a></li>
             <li><a href="">Accessories</a></li>
             <li><a href="">Denim</a></li>
-        </ol>
-            
+        </ol>  
         </nav>
     </aside>
+    <!-- End of mobile navigation -->
+    <aside class="user-reg h-screen w-80 bg-white fixed top-0 right-0 z-20 py-2 px-4 box-border transition-all duration-500 ease-in">
+        <div class="user-reg-header flex flex-row  w-5/6 items-center justify-between">
+          <svg class = "cancel" width="50" height="50" viewBox="0 0 30 30" fill="black" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20.0823 11.2435C20.4484 10.8774 20.4484 10.2838 20.0823 9.91765C19.7162 9.55154 19.1226 9.55154 18.7565 9.91765L15 13.6742L11.2435 9.91765C10.8774 9.55154 10.2838 9.55154 9.91767 9.91765C9.55155 10.2838 9.55155 10.8774 9.91767 11.2435L13.6742 15L9.91765 18.7565C9.55154 19.1226 9.55154 19.7162 9.91765 20.0823C10.2838 20.4484 10.8774 20.4484 11.2435 20.0823L15 16.3258L18.7565 20.0823C19.1226 20.4484 19.7162 20.4484 20.0823 20.0823C20.4484 19.7162 20.4484 19.1226 20.0823 18.7565L16.3258 15L20.0823 11.2435Z" fill="black"/>
+            </svg>   
+          <h1 class="text-xl font-avenirNext font-thin mr-5">Your Account</h1>
+        </div>
+        <div class="reg-login flex gap-5 ml-3 my-10 font-mono cursor-pointer h-fit">
+          <h1 class="font-medium text-sm tracking-wider login m-0">LOG IN</h1>
+          <h1 class="font-medium text-sm tracking-wider register m-0">REGISTER</h1>
+        </div>
+        <!-- registration form -->
+        <section class="register-form ml-3 hidden">
+          <form action="" class="flex flex-col gap-3">
+            <label for="firstname" class="font-sans text-xs ">FIRST NAME</label>
+            <input type="text" name="firstname" id="FIRST-NAME" placeholder="FIRST NAME" required class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+            <label for="lastname" class="font-sans text-xs ">LAST NAME</label>
+            <input type="text" name="lastname" id="LAST-NAME" placeholder="LAST NAME" required class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+            <label for="email" class="font-sans text-xs">EMAIL ADDRESS</label>
+            <input type="email" name="email" id="EMAIL" placeholder="YOU@GMAIL.COM" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+            <label for="password" class="font-sans text-xs">PASSWORD</label>
+            <input type="password" name="password" id="PASSWORD" placeholder="********" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+            <input type="submit" value="REGISTER" class="bg-black p-5 text-white hover:bg-light_brown hover:text-black font-sans text-md">
+          </form>
+        </section>
+        <!-- end of registration form -->
+        <section class="login-form ml-3 ">
+          <form action="" class="flex flex-col font-sans text-xs gap-3">
+            <label for="email">EMAIL ADDRESS</label>
+            <input type="email" name="email" id="EMAIL" placeholder="YOU@GMAIL.COM" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+            <label for="password">PASSWORD</label>
+            <input type="password" name="password" id="PASSWORD" placeholder="********" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+            <input type="submit" value="LOGIN" class="bg-black p-5 text-white hover:bg-light_brown hover:text-black font-sans text-xs">
+          </form>
+        </section>
+      </aside>
     <div class="main-container">
     <main class="hero bd">
         <header class="header" onscroll="scrHeight()" >
@@ -78,7 +114,7 @@
     <!-- 
         End of hero section and header 
      -->
-     <section class="user-signup">
+     <!-- <section class="user-signup">
         <div class="signup-heading">
             <span id="cross-mark" onclick="loginClose()">&#9587;</span>
             <h1>Your Account</h1>
@@ -112,7 +148,7 @@
                 </form>
             </section>
         </div> 
-     </section>
+     </section> -->
      <!-- 
            End of sign-up form
       -->
@@ -296,6 +332,8 @@
         end of footer 
      -->
     <script src="/JavaScript/app.js"></script>
+    <script src="/JavaScript/product.js"></script>
 </body>
+
 
 </html>
