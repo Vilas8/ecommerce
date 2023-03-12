@@ -16,31 +16,6 @@ function changeContent(){
 
 let dis = 0;
 
-// functions to show log-in and signup part when user clicks on it.
-function func1(){
-    document.querySelector('.log-in').style.display="flex";
-    document.querySelector('.signup').style.display="none";
-}
-
-function func2(){
-    document.querySelector('.signup').style.display="flex";
-    document.querySelector(".log-in").style.display="none";
-}
-
-// Function to display log-in  section on click
-
-function userAuth(){
-    document.querySelector('.user-signup').style.right="0px";
-    document.body.style.opacity='.8';
-    document.body.style.overflow='hidden';
-}
-
-function loginClose(){
-    document.querySelector('.user-signup').style.right = "-500px";
-    document.body.style.opacity='initial';
-    document.body.style.overflow='initial';
-}
-
 // adding background color to navbar while scrolling.
 
 window.addEventListener("scroll", function(){
