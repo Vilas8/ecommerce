@@ -3,8 +3,8 @@ module.exports = {
   content: ["./HTML/*.{html, js}"],
   theme: {
     fontFamily: {
-      mono: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', "-apple-system", "system-ui", "sans-serif"],
-      sans: ['SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'monospace'],
+      sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', "-apple-system", "system-ui", "sans-serif"],
+      mono: ['SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'monospace'],
       avenirNext: ["Georgia","Times",'Times New Roman',"serif"],
     },
     colors:{
