@@ -24,7 +24,11 @@ module.exports = {
       light_grey: "rgb(221, 221, 221)",
       light_brown: "#b5aa8f"
     },
-    extend: {},
+    extend: {
+      maxWidth: {
+        "64": "20rem"
+      }
+    },
   },
   plugins: [],
 }

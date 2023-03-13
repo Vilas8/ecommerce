@@ -34,7 +34,7 @@
         </nav>
     </aside>
     <!-- End of mobile navigation -->
-    <aside class="user-reg h-screen w-80 bg-white fixed top-0 right-0 z-20 py-2 px-4 box-border transition-all duration-500 ease-in">
+    <aside class="user-reg h-screen w-80 bg-white fixed top-0 -right-80 z-20 py-2 px-4 box-border transition-all duration-500 ease-in ">
         <div class="user-reg-header flex flex-row  w-5/6 items-center justify-between">
           <svg class = "cancel" width="50" height="50" viewBox="0 0 30 30" fill="black" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.0823 11.2435C20.4484 10.8774 20.4484 10.2838 20.0823 9.91765C19.7162 9.55154 19.1226 9.55154 18.7565 9.91765L15 13.6742L11.2435 9.91765C10.8774 9.55154 10.2838 9.55154 9.91767 9.91765C9.55155 10.2838 9.55155 10.8774 9.91767 11.2435L13.6742 15L9.91765 18.7565C9.55154 19.1226 9.55154 19.7162 9.91765 20.0823C10.2838 20.4484 10.8774 20.4484 11.2435 20.0823L15 16.3258L18.7565 20.0823C19.1226 20.4484 19.7162 20.4484 20.0823 20.0823C20.4484 19.7162 20.4484 19.1226 20.0823 18.7565L16.3258 15L20.0823 11.2435Z" fill="black"/>
@@ -111,7 +111,9 @@
                 <h6>THE JACK IN SPRUCE NEP PLAID</h6>
                 <h1>Perfecting A <br> Holiday Outfit</h1>
                 <button type="submit">
-                    <h3>SHOP NOW</h3>
+                    <a href="/HTML/product.html" class="text-white">
+                        <h3>SHOP NOW</h3>
+                    </a>
                 </button>
             </div>
         </section>
@@ -119,44 +121,6 @@
     <!-- 
         End of hero section and header 
      -->
-     <!-- <section class="user-signup">
-        <div class="signup-heading">
-            <span id="cross-mark" onclick="loginClose()">&#9587;</span>
-            <h1>Your Account</h1>
-            <span></span>
-        </div>  
-        <div class="user-container">
-        <div class="signup-options">
-            <h4 id="log-in" onclick="func1()">LOG IN</h4>
-            <h4 id="sign-up" onclick="func2()">REGISTER</h4>
-        </div> 
-            <section class="signup">
-                <form action="" method="get">
-                    <label for="fname">FIRST NAME</label><br>
-                    <input type="text" name="firstname" id="text-input" placeholder="FIRST NAME" class="form-inputs" required><br>
-                    <label for="lname">LAST NAME</label><br>
-                    <input type="text" name="lastname" id="text" placeholder="LAST NAME" class="form-inputs" ><br>
-                    <label for="email">EMAIL ADDRESS</label><br>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required><br>
-                    <label for="password">PASSWORD</label><br>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required><br>
-                    <input type="submit" value="REGISTER" class="submit-btn form-inputs">
-                </form>
-            </section>
-            <section class="log-in">
-                <form action="" method="get">
-                    <label for="email">EMAIL</label><br>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required><br>
-                    <label for="password">PASSWORD</label><br>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required><br>
-                    <input type="submit" value="LOG IN" class="submit-btn form-inputs">
-                </form>
-            </section>
-        </div> 
-     </section> -->
-     <!-- 
-           End of sign-up form
-      -->
     <section class="products">
         <li class="items">
             <a href=""><h3>Shirts</h3></a>
