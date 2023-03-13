@@ -17,14 +17,22 @@ const hideLog = (e) => {
 }
 
 const showLogin = (e) => {
-    e.target.classList.add("text-slate");
     if(e.target === login){
         loginForm.classList.remove('hidden');
         signUpForm.classList.add('hidden');
+        login.classList.remove("text-black");
+        login.classList.add("text-slate");   
+        register.classList.add('text-black');
+        register.classList.remove("text-slate")
     }
     if (e.target === register){
         signUpForm.classList.remove('hidden');
         loginForm.classList.add('hidden');
+        register.classList.remove('text-black');
+        register.classList.add("text-slate");
+        login.classList.add("text-black");
+        login.classList.remove("text-slate"); 
+       
     }
 }
 

@@ -125,7 +125,3 @@
 .blur {
     filter: blur(5px);
 }
-
-.title {
-    font-size: clamp(13px, 3.5vw, 16px);
-}

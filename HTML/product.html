@@ -4,7 +4,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/product.css" />
-    <link rel="stylesheet" href="/CSS/input.css">
     <title>Shop</title>
   </head>
   <body class="bg-light_Navy">
@@ -74,7 +73,7 @@
   <!-- end of mobile navigation -->
   <!-- Main body starts here -->
     <div class="main-container">
-    <header class="header flex flex-row justify-between items-center pl-5 pr-5 h-12 text-white gap-4 fixed top-0 w-screen z-10" onscroll="scrHeight()" >
+    <header class="header flex flex-row justify-between items-center pl-5 pr-5 h-16 text-white gap-4 fixed top-0 w-screen z-10" onscroll="scrHeight()" >
       <nav class="nav hidden md:flex flex-row gap-5 h-6 align-text-bottom">
           <a href="shop.html " class="border-b-0 hover:border-b-2 transition-border ease-in duration-500">SHOP</a>
           <a href="About.html" class="border-b-0 hover:border-b-2 transition-border ease-in duration-500">ABOUT</a>
@@ -90,7 +89,7 @@
               <img src="/assets/free_icon_1.svg" alt="search bar" class=" h-5 w-5 " >
               <input type="text" class="main-search bg-transparent border-b w-28 outline-none"></input>
           </div>
-          <div class="account" onclick="userAuth()">
+          <div class="account" >
               <img src="/assets/account-new.svg" alt="account" class="w-5 h-5">
           </div>
           <div class="cart">
@@ -116,13 +115,12 @@
   <!-- End of header and header Image -->
   <!-- start of product sections -->
   <section class="products">
-        <div class="category-name text-slate text-xs font-mono mx-5 my-5 py-2 tracking-wide">
+        <div class="category-name text-slate text-xs font-mono m-3 tracking-wide">
           MEN'S/SHIRT
         </div>
-        <div class="products-list mx-5  py-2 flex flex-row">
-          <aside class="collections-name w-56 text-white font-sans font-light hidden md:block">
-            <ul class="flex gap-2 flex-col
-            ">
+        <div class="products-list mx-5 py-2 flex flex-row">
+          <aside class="collections-name w-48 text-white font-sans font-light">
+            <ul class="flex flex-col gap-2">
               <li class="item-name">SHIRTS</li>
               <li class="item-name">KNITS</li>
               <li class="item-name">SWEATERS</li>
@@ -133,130 +131,16 @@
               <li class="item-name">ACCESSORIES</li>
             </ul>
           </aside>
-            <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3 lg:grid-cols-4">
+            <ul class="grid grid-cols-2 sm:grid-cols-3 gap-3">
               <li class="w-auto max-w-64">
                 <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
+                  <a href="/HTML/product.html" class="w-64 h-64 relative block group">
+                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="">
+                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden">
                   </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
                 </figure>
               </li>
-              <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li> <li class="w-auto max-w-64">
-                <figure>
-                  <a href="/HTML/product.html" class="group ">
-                    <img src="/ProductAssets/shirts/shirt1.webp" alt="shirt image" class="group-hover:hidden">
-                    <img src="/ProductAssets/shirts/shirt1-hover.webp" alt="hover shirt image" class="hidden group-hover:block">
-                  </a>
-                  <figcaption class="text-white flex flex-col mt-4">
-                    <span class="title text-md font-mono font-medium mb-1">The SHORT SLEEVE HAWTHRONE</span>
-                    <span class="subtitle text-xs font-avenirNext font-thin text-slate mb-px">in Fog Strip</span>
-                    <span class="price text-xs font-avenirNext font-thin">$125</span>
-                  </figcaption>
-                </figure>
-              </li>
-              
+             
             </ul>
         </div>
   </section>
