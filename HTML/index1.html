@@ -34,7 +34,7 @@
         </nav>
     </aside>
     <!-- End of mobile navigation -->
-    <aside class="user-reg h-screen w-80 bg-white fixed top-0 right-0 z-20 py-2 px-4 box-border transition-all duration-500 ease-in">
+    <aside class="user-reg h-screen w-80 bg-white fixed top-0 -right-80 z-20 py-2 px-4 box-border transition-all duration-500 ease-in ">
         <div class="user-reg-header flex flex-row  w-5/6 items-center justify-between">
           <svg class = "cancel" width="50" height="50" viewBox="0 0 30 30" fill="black" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.0823 11.2435C20.4484 10.8774 20.4484 10.2838 20.0823 9.91765C19.7162 9.55154 19.1226 9.55154 18.7565 9.91765L15 13.6742L11.2435 9.91765C10.8774 9.55154 10.2838 9.55154 9.91767 9.91765C9.55155 10.2838 9.55155 10.8774 9.91767 11.2435L13.6742 15L9.91765 18.7565C9.55154 19.1226 9.55154 19.7162 9.91765 20.0823C10.2838 20.4484 10.8774 20.4484 11.2435 20.0823L15 16.3258L18.7565 20.0823C19.1226 20.4484 19.7162 20.4484 20.0823 20.0823C20.4484 19.7162 20.4484 19.1226 20.0823 18.7565L16.3258 15L20.0823 11.2435Z" fill="black"/>
@@ -68,6 +68,7 @@
             <input type="password" name="password" id="PASSWORD" placeholder="********" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
             <input type="submit" value="LOGIN" class="bg-black p-5 text-white hover:bg-light_brown hover:text-black font-sans text-xs">
           </form>
+          <p class=" reset text-sm font-mono cursor-pointer">RESET YOUR PASSWORD</p>
         </section>
       </aside>
     <div class="main-container">
@@ -85,14 +86,18 @@
             </div>
             <div class="header-features">
                 <div class="search">
-                    <img src="/assets/free_icon_1.svg" alt="search bar" width="15" height="15">
+                    <img src="/assets/free_icon_1.svg" alt="search bar" width="20" height="20">
                     <input type="text" class="main-search"></input>
                 </div>
                 <div class="account" onclick="userAuth()">
-                    <img src="/assets/account-new.svg" alt="account" width="15" height="15">
+                    <img src="/assets/account-new.svg" alt="account" width="20" height="20">
                 </div>
                 <div class="cart">
-                    <img src="/assets/cart.svg" alt="cart" width="17" height="17">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.1477 5.25H5.33514L4.15497 3.1346C4.0225 2.89715 3.7719 2.75 3.5 2.75H2C1.58579 2.75 1.25 3.08579 1.25 3.5C1.25 3.91421 1.58579 4.25 2 4.25H3.0596L4.22429 6.33765L6.91037 12.2809L6.91312 12.2869L7.14971 12.8104L4.45287 15.687C4.25895 15.8939 4.19825 16.1924 4.29599 16.4585C4.39372 16.7247 4.63317 16.913 4.91486 16.9452L7.37299 17.2261C10.4477 17.5775 13.5524 17.5775 16.627 17.2261L19.0852 16.9452C19.4967 16.8981 19.7922 16.5264 19.7452 16.1148C19.6981 15.7033 19.3264 15.4078 18.9149 15.4549L16.4567 15.7358C13.4952 16.0742 10.5048 16.0742 7.54331 15.7358L6.56779 15.6243L8.54717 13.513C8.56632 13.4925 8.5841 13.4713 8.60052 13.4494L9.35334 13.5474C10.4083 13.6847 11.4746 13.7116 12.5351 13.6277C15.0086 13.4321 17.301 12.2551 18.9015 10.3591L19.4795 9.67425C19.499 9.65125 19.517 9.62711 19.5335 9.60194L20.6109 7.96009C21.3745 6.79633 20.5397 5.25 19.1477 5.25Z" fill="white"/>
+                        <path d="M6.5 18.5C5.67157 18.5 5 19.1716 5 20C5 20.8284 5.67157 21.5 6.5 21.5C7.32843 21.5 8 20.8284 8 20C8 19.1716 7.32843 18.5 6.5 18.5Z" fill="white"/>
+                        <path d="M16 20C16 19.1716 16.6716 18.5 17.5 18.5C18.3284 18.5 19 19.1716 19 20C19 20.8284 18.3284 21.5 17.5 21.5C16.6716 21.5 16 20.8284 16 20Z" fill="white"/>
+                        </svg>
                 </div>
                 <div class="navbar">
                     <div></div>
@@ -106,7 +111,9 @@
                 <h6>THE JACK IN SPRUCE NEP PLAID</h6>
                 <h1>Perfecting A <br> Holiday Outfit</h1>
                 <button type="submit">
-                    <h3>SHOP NOW</h3>
+                    <a href="/HTML/product.html" class="text-white">
+                        <h3>SHOP NOW</h3>
+                    </a>
                 </button>
             </div>
         </section>
@@ -114,44 +121,6 @@
     <!-- 
         End of hero section and header 
      -->
-     <!-- <section class="user-signup">
-        <div class="signup-heading">
-            <span id="cross-mark" onclick="loginClose()">&#9587;</span>
-            <h1>Your Account</h1>
-            <span></span>
-        </div>  
-        <div class="user-container">
-        <div class="signup-options">
-            <h4 id="log-in" onclick="func1()">LOG IN</h4>
-            <h4 id="sign-up" onclick="func2()">REGISTER</h4>
-        </div> 
-            <section class="signup">
-                <form action="" method="get">
-                    <label for="fname">FIRST NAME</label><br>
-                    <input type="text" name="firstname" id="text-input" placeholder="FIRST NAME" class="form-inputs" required><br>
-                    <label for="lname">LAST NAME</label><br>
-                    <input type="text" name="lastname" id="text" placeholder="LAST NAME" class="form-inputs" ><br>
-                    <label for="email">EMAIL ADDRESS</label><br>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required><br>
-                    <label for="password">PASSWORD</label><br>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required><br>
-                    <input type="submit" value="REGISTER" class="submit-btn form-inputs">
-                </form>
-            </section>
-            <section class="log-in">
-                <form action="" method="get">
-                    <label for="email">EMAIL</label><br>
-                    <input type="email" name="email" id="email" placeholder="EMAIL" class="form-inputs" required><br>
-                    <label for="password">PASSWORD</label><br>
-                    <input type="password" name="password" id="password" placeholder="PASSWORD" class="form-inputs" required><br>
-                    <input type="submit" value="LOG IN" class="submit-btn form-inputs">
-                </form>
-            </section>
-        </div> 
-     </section> -->
-     <!-- 
-           End of sign-up form
-      -->
     <section class="products">
         <li class="items">
             <a href=""><h3>Shirts</h3></a>
