@@ -148,7 +148,7 @@
     width: 100%;
     height: auto;
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in;
 }
 
 .image-wrapper img:last-child {
@@ -266,4 +266,41 @@ footer button {
 
 .top-0per {
     top: 0%;
+}
+
+.top-64px {
+    top: 64px;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.nav a {
+    display: inline-block;
+    position: relative;
+    font-weight: bold;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    margin: 0 1em;
+    padding: .5em 0;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.nav a:after {
+    background: none repeat scroll 0 0 transparent;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: white;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+a:hover:after {
+    width: 100%;
+    left: 0;
 }
