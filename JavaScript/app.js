@@ -24,7 +24,7 @@ window.addEventListener("scroll", function(){
     let logo = this.document.querySelector('#logo').querySelector('h3');
     
     if (scrHeight > 200){
-        header.style.background="rgb(41,41,41)";
+        header.style.background="black";
         logo.classList.add('gradient-color');
         
     }
