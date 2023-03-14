@@ -5,6 +5,9 @@ const login = document.querySelector('.login');
 const register = document.querySelector('.register');
 const loginForm = document.querySelector('.login-form');
 const signUpForm = document.querySelector('.register-form');
+const productsOption = document.querySelector('.collections-name');
+const productList = document.querySelector(".product-list-items") ;
+
 
 const showLog = (e) =>{
     loginSection.classList.remove('-right-80');
@@ -36,9 +39,33 @@ const showLogin = (e) => {
     }
 }
 
+// making the product options fixed
+function makeCollectionsFixed(){
+        const topDistance = productsOption.getBoundingClientRect().top;
+        console.log(topDistance);
+        if(topDistance <= 64){
+            let asideList = ["fixed", "top-16"];
+            for (let className of asideList){
+                console.log(className);
+                productsOption.classList.add(className);
+            }
+            console.log(productsOption);
+    
+            productList.classList.add("ml-56");
+            window.removeEventListener("scroll", makeCollectionsFixed);
+        }
+    
+}
+
 
 
 account.addEventListener("click", showLog);
 cancel.addEventListener("click", hideLog);
+
 login.addEventListener("click", showLogin);
 register.addEventListener("click", showLogin);
+
+
+window.addEventListener('scroll', makeCollectionsFixed);
+
+
