@@ -1,0 +1,41 @@
+{
+    "products": {
+        "shirts": {
+            "headerImageLink": "Imagelink",
+            "headerProduct": "product name",
+            "itemList": [
+                {
+                    "id": 1,
+                    "image": "image-link",
+                    "hover-image": "hover-image-link",
+                    "title": "title",
+                    "subtitle": "subtitle",
+                    "price": "price"
+                },
+                {
+                    "id": 2,
+                    "image": "image-link",
+                    "hover-image": "hover-image-link",
+                    "title": "title",
+                    "subtitle": "subtitle",
+                    "price": "price"
+                },
+                {
+                    "id": 2,
+                    "image": "image-link",
+                    "hover-image": "hover-image-link",
+                    "title": "title",
+                    "subtitle": "subtitle",
+                    "price": "price"
+                }
+            ]
+        },
+        "knits": {},
+        "sweaters": {},
+        "bottoms": {},
+        "denim": {},
+        "outwear": {},
+        "footwear": {},
+        "accessories": {}
+    }
+}
