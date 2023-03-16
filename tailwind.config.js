@@ -6,7 +6,8 @@ module.exports = {
       sans: ['Calibre', 'Inter', 'San Francisco', 'SF Pro Text', "-apple-system", "system-ui", "sans-serif"],
       mono: ['SF Mono', 'Fira Code', 'Fira Mono', 'Roboto Mono', 'monospace'],
       avenirNext: ['Avenir Next W01','Avenir Next',"Avenir",'HelveticaNeue-Light','Helvetica Neue Light','Helvetica Neue',"Helvetica","Arial",'Lucida Grande',"sans-serif"],
-      chronicle: ['HCo Chronicle Display','Georgia','Times','Times New Roman','serif']
+      chronicle: ['HCo Chronicle Display','Georgia','Times','Times New Roman','serif'],
+      nunito: ["Nunito Sans", "sans-serif"]
     },
     colors:{
       green: "#64ffda",

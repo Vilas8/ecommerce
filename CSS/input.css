@@ -127,13 +127,18 @@
 }
 
 .title {
-    font-size: clamp(13px, 3.5vw, 17px);
+    /* font-size: clamp(13px, 3vw, 15px); */
+    font-size: 13px;
+    letter-spacing: 0.6;
+    font-family: 'Nunito Sans', sans-serif;
 
 }
 
 .subtitle,
 .price {
-    font-size: clamp(7px, 3vw, 12px);
+    font-size: clamp(11px, 2.5vw, 12px);
+    letter-spacing: 0.2;
+    font-weight: 200;
     height: fit-content;
 }
 

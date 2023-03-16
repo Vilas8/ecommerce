@@ -685,6 +685,10 @@ video {
   width: fit-content;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-screen {
   width: 100vw;
 }
@@ -840,6 +844,10 @@ video {
   font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
 }
 
+.font-nunito {
+  font-family: Nunito Sans, sans-serif;
+}
+
 .font-sans {
   font-family: Calibre, Inter, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
 }
@@ -887,6 +895,10 @@ video {
 
 .font-thin {
   font-weight: 100;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .tracking-wide {
@@ -1054,12 +1066,17 @@ video {
 }
 
 .title {
-  font-size: clamp(13px, 3.5vw, 17px);
+  /* font-size: clamp(13px, 3vw, 15px); */
+  font-size: 13px;
+  letter-spacing: 0.6;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .subtitle,
 .price {
-  font-size: clamp(7px, 3vw, 12px);
+  font-size: clamp(11px, 2.5vw, 12px);
+  letter-spacing: 0.2;
+  font-weight: 200;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1297,10 +1314,6 @@ a:hover:after {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-1 {
-    margin-bottom: 0.25rem;
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
