@@ -61,23 +61,21 @@ function makeCollectionsFixed(e){
             hasRun = true;
         }
         // console.log(topDistance)
-        if(topDistance > 64){
+        if(topDistance > 64 || window.innerWidth <= 768){
             for (let className of asideList){
                 productsOption.classList.remove(className);
             }
             productList.style.margin = "0";
             hasRun = false;
         }
-
-
     
 }
 
+
 const moveCollectionsBottom = () => {
     const bottomDistance = productsOption.getBoundingClientRect().bottom;
-    console.log(bottomDistance);
     const footerHeight = footer.clientHeight;
-    console.log(footerHeight);
+
     if(footerHeight >= bottomDistance){
         productsOption.classList.remove("top-64px");
         productsOption.style.bottom = `${footerHeight+0.5}px`;
