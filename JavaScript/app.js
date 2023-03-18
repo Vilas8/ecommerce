@@ -1,5 +1,4 @@
 import { showLog, hideLog, showLogin} from "./product.js";
-import { showNewPage } from "./dynamicApp.js";
 
 
 const mobileNav = document.querySelector('.mobile-navigation');
@@ -123,10 +122,9 @@ cancel.addEventListener("click", hideLog)
 login.addEventListener("click", showLogin);
 register.addEventListener("click", showLogin);
 
-collectionsList.forEach((item)=> {
-    item.addEventListener("click", showNewPage)
-})
 
+
+// exports
 export {showNav, hideNav, mainContainer, disableScroll, enableScroll}
 
 

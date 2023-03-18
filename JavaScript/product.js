@@ -2,6 +2,7 @@ import { mainContainer } from "./app.js";
 import { disableScroll, enableScroll } from "./app.js";
 
 
+// variable declarations
 const account = document.querySelector('.account');
 const cancel = document.querySelector('.cancel');
 
@@ -16,9 +17,10 @@ const productsOption = document.querySelector('.collections-name');
 const productList = document.querySelector(".product-list-items");
 
 let hasRun = false;
-
 const footer = document.querySelector('.footer');
 
+
+// Functions
 
 function showLog(e){
     loginSection.classList.remove('-right-80');
@@ -56,7 +58,6 @@ function showLogin(e){
 
 // making the product options fixed
 function makeCollectionsFixed(e){
-        console.log('hi')
         let asideList = ["fixed", "top-64px"];
         const topDistance = productSection.getBoundingClientRect().top;
         const optionWidth = productsOption.clientWidth;
@@ -115,9 +116,6 @@ if (window.location.pathname === "/HTML/product.html"){
 }
 
 
-
-
-
-
+// Exports
 export {hideLog, showLog, showLogin}
 

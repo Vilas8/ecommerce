@@ -6,9 +6,13 @@ body {
 }
 
 .hero {
-    background-image: url(/assets/jackjaspe.webp);
+    background-image: url(/assets/heroImage.webp);
     height: 90vh;
     background-size: cover;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 header {
@@ -169,13 +173,13 @@ button h3 {
     }
 
     .hero-container {
-        padding: 1rem 5rem 0 5rem;
+        padding: 3rem 5rem 0 5rem;
         width: fit-content;
     }
 
     @media screen and (max-width: 768px) {
         .hero {
-            background: url(/assets/jackjaspe3.webp);
+            background: url(/assets/heroImage.768px.webp);
             background-position: center;
             background-repeat: no-repeat;
         }
@@ -189,7 +193,7 @@ button h3 {
         }
 
         .hero-content h6 {
-            font-size: 10px;
+            font-size: 15px;
         }
 
         .header-features>div {
@@ -199,7 +203,7 @@ button h3 {
 
         @media screen and (max-width: 600px) {
             .hero {
-                background: url(/assets/jackjaspe2.jpg);
+                background: url(/assets/heroImage.mobile.webp);
                 background-size: cover;
             }
 
@@ -208,7 +212,7 @@ button h3 {
             }
         }
 
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: 600px) {
             #logo h3 {
                 font-size: 15px;
             }
@@ -218,14 +222,18 @@ button h3 {
                 margin: 8rem 0 0 0;
             }
 
+
             .hero-content h1 {
-                font-size: 25px;
+                color: white;
+                font-size: 30px;
                 margin: 0 0 1.5rem 0;
             }
 
             .hero-content button {
-                padding: .5rem 1.2rem;
+                padding: .8rem 2rem;
                 font-size: 10px;
+                background-color: black;
+                border: 1px solid white;
             }
         }
 
