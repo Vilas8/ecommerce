@@ -1072,6 +1072,11 @@ footer button {
     line-height: 1.25rem;
 }
 
+.text-slate {
+    --tw-text-opacity: 1;
+    color: rgb(136 146 176 / var(--tw-text-opacity));
+}
+
 .text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
