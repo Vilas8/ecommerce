@@ -1,3 +1,8 @@
+import { mainContainer } from "./app.js";
+import { disableScroll, enableScroll } from "./app.js";
+
+
+// variable declarations
 const account = document.querySelector('.account');
 const cancel = document.querySelector('.cancel');
 
@@ -12,21 +17,26 @@ const productsOption = document.querySelector('.collections-name');
 const productList = document.querySelector(".product-list-items");
 
 let hasRun = false;
-
 const footer = document.querySelector('.footer');
 
 
-const showLog = (e) =>{
+// Functions
+
+function showLog(e){
     loginSection.classList.remove('-right-80');
     loginSection.classList.add("right-0");
+    mainContainer.classList.add("blur");
+    disableScroll()
 }
 
-const hideLog = (e) => {
+function hideLog(e){
     loginSection.classList.remove("right-0");
     loginSection.classList.add("-right-80");
+    mainContainer.classList.remove("blur");
+    enableScroll()
 }
 
-const showLogin = (e) => {
+function showLogin(e){
     if(e.target === login){
         loginForm.classList.remove('hidden');
         signUpForm.classList.add('hidden');
@@ -91,15 +101,21 @@ cancel.addEventListener("click", hideLog);
 login.addEventListener("click", showLogin);
 register.addEventListener("click", showLogin);
 
-window.addEventListener('scroll', makeCollectionsFixed);
-
-let observerOptions = {
-    threshold: 1,
-    rootMargin: "0px"
+if (window.location.pathname === "/HTML/product.html"){
+    window.addEventListener('scroll', makeCollectionsFixed);  
+    
+    let observerOptions = {
+        threshold: 1,
+        rootMargin: "0px"
+    }
+    
+    window.onload = () => {
+        let observer = new IntersectionObserver(moveCollectionsBottom, observerOptions);
+        observer.observe(footer);
+    }
 }
 
-let observer = new IntersectionObserver(moveCollectionsBottom, observerOptions);
-observer.observe(footer);
 
-
+// Exports
+export {hideLog, showLog, showLogin}
 

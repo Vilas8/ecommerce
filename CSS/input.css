@@ -7,6 +7,11 @@
 /* 
         mobile - navigation
 */
+
+html {
+    scroll-behavior: smooth;
+}
+
 .mobile-navigation {
     box-sizing: border-box;
     width: clamp(300px, 40%, 400px);
