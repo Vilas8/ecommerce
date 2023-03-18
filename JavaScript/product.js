@@ -1,13 +1,19 @@
 const account = document.querySelector('.account');
 const cancel = document.querySelector('.cancel');
+
 const loginSection = document.querySelector('.user-reg');
 const login = document.querySelector('.login');
 const register = document.querySelector('.register');
 const loginForm = document.querySelector('.login-form');
 const signUpForm = document.querySelector('.register-form');
+
 const productSection = document.querySelector('.products-options-list')
 const productsOption = document.querySelector('.collections-name');
-const productList = document.querySelector(".product-list-items") ;
+const productList = document.querySelector(".product-list-items");
+
+let hasRun = false;
+
+const footer = document.querySelector('.footer');
 
 
 const showLog = (e) =>{
@@ -42,31 +48,38 @@ const showLogin = (e) => {
 
 // making the product options fixed
 function makeCollectionsFixed(e){
-        let asideList = ["fixed", "top-16"];
+        let asideList = ["fixed", "top-64px"];
         const topDistance = productSection.getBoundingClientRect().top;
         const optionWidth = productsOption.clientWidth;
-        console.log(optionWidth);
+    
         if(!hasRun && topDistance <= 64){
-            console.log(topDistance);
             for (let className of asideList){
-                console.log(className);
                 productsOption.classList.add(className);
             }
-            console.log(productsOption);
             
             productList.style.margin = `0 0 0 ${optionWidth+5}px`;
             hasRun = true;
         }
         // console.log(topDistance)
-        if(topDistance > 64){
+        if(topDistance > 64 || window.innerWidth <= 768){
             for (let className of asideList){
                 productsOption.classList.remove(className);
             }
             productList.style.margin = "0";
             hasRun = false;
         }
+    
+}
 
 
+const moveCollectionsBottom = () => {
+    const bottomDistance = productsOption.getBoundingClientRect().bottom;
+    const footerHeight = footer.clientHeight;
+
+    if(footerHeight >= bottomDistance){
+        productsOption.classList.remove("top-64px");
+        productsOption.style.bottom = `${footerHeight+0.5}px`;
+    }
     
 }
 
@@ -78,7 +91,15 @@ cancel.addEventListener("click", hideLog);
 login.addEventListener("click", showLogin);
 register.addEventListener("click", showLogin);
 
-let hasRun = false;
 window.addEventListener('scroll', makeCollectionsFixed);
+
+let observerOptions = {
+    threshold: 1,
+    rootMargin: "0px"
+}
+
+let observer = new IntersectionObserver(moveCollectionsBottom, observerOptions);
+observer.observe(footer);
+
 
 

@@ -541,18 +541,6 @@ video {
   top: 7rem;
 }
 
-.right-0 {
-  right: 0px;
-}
-
-.top-16 {
-  top: 4rem;
-}
-
-.left-0 {
-  left: 0px;
-}
-
 .z-10 {
   z-index: 10;
 }
@@ -599,6 +587,10 @@ video {
   margin-bottom: 1px;
 }
 
+.ml-0 {
+  margin-left: 0px;
+}
+
 .ml-3 {
   margin-left: 0.75rem;
 }
@@ -613,10 +605,6 @@ video {
 
 .mt-4 {
   margin-top: 1rem;
-}
-
-.ml-56 {
-  margin-left: 14rem;
 }
 
 .box-border {
@@ -651,6 +639,10 @@ video {
   height: 1.5rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-fit {
   height: -moz-fit-content;
   height: fit-content;
@@ -658,10 +650,6 @@ video {
 
 .h-screen {
   height: 100vh;
-}
-
-.h-auto {
-  height: auto;
 }
 
 .max-h-80 {
@@ -697,16 +685,16 @@ video {
   width: fit-content;
 }
 
+.w-full {
+  width: 100%;
+}
+
 .w-screen {
   width: 100vw;
 }
 
 .max-w-64 {
   max-width: 20rem;
-}
-
-.flex-1 {
-  flex: 1 1 0%;
 }
 
 .cursor-pointer {
@@ -761,24 +749,12 @@ video {
   gap: 2rem;
 }
 
-.overflow-auto {
-  overflow: auto;
-}
-
-.overflow-hidden {
-  overflow: hidden;
-}
-
 .border-b {
   border-bottom-width: 1px;
 }
 
-.border-b-0 {
-  border-bottom-width: 0px;
-}
-
-.border-b-2 {
-  border-bottom-width: 2px;
+.border-t-2 {
+  border-top-width: 2px;
 }
 
 .border-b-white {
@@ -868,6 +844,10 @@ video {
   font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
 }
 
+.font-nunito {
+  font-family: Nunito Sans, sans-serif;
+}
+
 .font-sans {
   font-family: Calibre, Inter, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif;
 }
@@ -915,6 +895,10 @@ video {
 
 .font-thin {
   font-weight: 100;
+}
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .tracking-wide {
@@ -1082,12 +1066,17 @@ video {
 }
 
 .title {
-  font-size: clamp(13px, 3.5vw, 17px);
+  /* font-size: clamp(13px, 3vw, 15px); */
+  font-size: 13px;
+  letter-spacing: 0.6;
+  font-family: 'Nunito Sans', sans-serif;
 }
 
 .subtitle,
 .price {
-  font-size: clamp(7px, 3vw, 12px);
+  font-size: clamp(11px, 2.5vw, 12px);
+  letter-spacing: 0.2;
+  font-weight: 200;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -1103,7 +1092,7 @@ video {
   width: 100%;
   height: auto;
   opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in;
 }
 
 .image-wrapper img:last-child {
@@ -1225,6 +1214,43 @@ footer button {
   top: 0%;
 }
 
+.top-64px {
+  top: 64px;
+}
+
+.right-0 {
+  right: 0;
+}
+
+.nav a {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin: 0 1em;
+  padding: .5em 0;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.nav a:after {
+  background: none repeat scroll 0 0 transparent;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 50%;
+  position: absolute;
+  background: white;
+  transition: width 0.3s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
 .placeholder\:font-mono::-moz-placeholder {
   font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
 }
@@ -1255,10 +1281,6 @@ footer button {
 
 .hover\:border-2:hover {
   border-width: 2px;
-}
-
-.hover\:border-b-2:hover {
-  border-bottom-width: 2px;
 }
 
 .hover\:border-solid:hover {
@@ -1292,10 +1314,6 @@ footer button {
 }
 
 @media (min-width: 640px) {
-  .sm\:mb-1 {
-    margin-bottom: 0.25rem;
-  }
-
   .sm\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
