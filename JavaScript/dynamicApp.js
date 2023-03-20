@@ -25,6 +25,9 @@ const showNewPage = async (e) => {
         headerImageLink = data.products[item].headerImageLink
         headerProduct = data.products[item].headerProduct
         itemList = data.products[item].itemList
+
+        // update header
+        updateHeader(headerImageLink, headerProduct)
         
         // removing the current products
         removeChildNodes()
@@ -57,8 +60,7 @@ const showNewPage = async (e) => {
             
         }
 
-        // update header
-        updateHeader(headerImageLink, headerProduct)
+        
     }
     catch(e){
         console.log(e)
