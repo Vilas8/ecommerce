@@ -16,50 +16,55 @@ const showNewPage = async (e) => {
     let item;
     item = (e.type === "load") ? "shirts": e.target.innerHTML.toLowerCase()
         
-    
-    // waiting for data from json file
-    let response = await fetch(file)
-    let data = await response.json()
+    try{
+        // waiting for data from json file
+        let response = await fetch(file)
+        let data = await response.json()
 
-    // assigning all the dynamic content
-    console.log(item)
-    headerImageLink = data.products[item].headerImageLink
-    headerProduct = data.products[item].headerProduct
-    itemList = data.products[item].itemList
-    
-    // removing the current products
-    removeChildNodes()
+        // assigning all the dynamic content
+        headerImageLink = data.products[item].headerImageLink
+        headerProduct = data.products[item].headerProduct
+        itemList = data.products[item].itemList
 
-    for (let product of itemList){
-        imageSrc = product.src
-        imageHoverSrc = product.src2
-        title = product.title
-        subtitle = product.subtitle
-        price = product.price
+        // update header
+        updateHeader(headerImageLink, headerProduct)
         
-        let cloneNode = productPrototype.cloneNode(true)
-        
-        // child elements that needs to updated.
-        img1 = cloneNode.querySelector(".normal-image")
-        imgHover = cloneNode.querySelector(".hover-image")
-        titleEle = cloneNode.querySelector(".title")
-        subtitleEle = cloneNode.querySelector(".subtitle")
-        priceEle = cloneNode.querySelector(".price")
-        
-        // adding attributes and text
-        img1.setAttribute("src", imageSrc)
-        imgHover.setAttribute("src", imageHoverSrc)
-        titleEle.innerHTML = title
-        subtitleEle.innerHTML = subtitle
-        priceEle.innerHTML = price
+        // removing the current products
+        removeChildNodes()
 
-        // adding the new product to the list
-        productWrapper.appendChild(cloneNode)
+        for (let product of itemList){
+            imageSrc = product.src
+            imageHoverSrc = product.src2
+            title = product.title
+            subtitle = product.subtitle
+            price = product.price
+            
+            let cloneNode = productPrototype.cloneNode(true)
+            
+            // child elements that needs to updated.
+            img1 = cloneNode.querySelector(".normal-image")
+            imgHover = cloneNode.querySelector(".hover-image")
+            titleEle = cloneNode.querySelector(".title")
+            subtitleEle = cloneNode.querySelector(".subtitle")
+            priceEle = cloneNode.querySelector(".price")
+            
+            // adding attributes and text
+            img1.setAttribute("src", imageSrc)
+            imgHover.setAttribute("src", imageHoverSrc)
+            titleEle.innerHTML = title
+            subtitleEle.innerHTML = subtitle
+            priceEle.innerHTML = price
+
+            // adding the new product to the list
+            productWrapper.appendChild(cloneNode)
+            
+        }
+
         
     }
-
-    // update header
-    updateHeader(headerImageLink, headerProduct)
+    catch(e){
+        console.log(e)
+    }
     
 }
 

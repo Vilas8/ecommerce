@@ -4,7 +4,155 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/CSS/item.css" />
+    <link rel="stylesheet" href="/CSS/product.css">
     <title>item</title>
   </head>
-  <body></body>
+  <body>
+    <aside class="user-reg h-screen w-80 bg-white fixed top-0 -right-80 z-20 py-2 px-4 box-border transition-all duration-500 ease-in ">
+      <div class="user-reg-header flex flex-row  w-5/6 items-center justify-between">
+        <svg class = "cancel" width="50" height="50" viewBox="0 0 30 30" fill="black" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.0823 11.2435C20.4644 10.8774 20.4644 10.2838 20.0823 9.91765C19.7162 9.55154 19.1226 9.55154 18.7565 9.91765L15 13.6742L11.2435 9.91765C10.8774 9.55154 10.2838 9.55154 9.91767 9.91765C9.55155 10.2838 9.55155 10.8774 9.91767 11.2435L13.6742 15L9.91765 18.7565C9.55154 19.1226 9.55154 19.7162 9.91765 20.0823C10.2838 20.4644 10.8774 20.4644 11.2435 20.0823L15 16.3258L18.7565 20.0823C19.1226 20.4644 19.7162 20.4644 20.0823 20.0823C20.4644 19.7162 20.4644 19.1226 20.0823 18.7565L16.3258 15L20.0823 11.2435Z" fill="black"/>
+          </svg>   
+        <h1 class="text-lg font-nunito font-thin mr-5">Your Account</h1>
+      </div>
+      <div class="reg-login flex gap-5 ml-3 my-10 font-mono cursor-pointer h-fit">
+        <h1 class="font-medium text-sm tracking-wider login m-0">LOG IN</h1>
+        <h1 class="font-medium text-sm tracking-wider register m-0">REGISTER</h1>
+      </div>
+      <!-- registration form -->
+      <section class="register-form ml-3 hidden">
+        <form action="" class="flex flex-col gap-3">
+          <label for="firstname" class="font-sans text-xs ">FIRST NAME</label>
+          <input type="text" name="firstname" id="FIRST-NAME" placeholder="FIRST NAME" required class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+          <label for="lastname" class="font-sans text-xs ">LAST NAME</label>
+          <input type="text" name="lastname" id="LAST-NAME" placeholder="LAST NAME" required class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+          <label for="email" class="font-sans text-xs">EMAIL ADDRESS</label>
+          <input type="email" name="email" id="EMAIL" placeholder="YOU@GMAIL.COM" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+          <label for="password" class="font-sans text-xs">PASSWORD</label>
+          <input type="password" name="password" id="PASSWORD" placeholder="********" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+          <input type="submit" value="REGISTER" class="bg-black p-5 text-white hover:bg-light_brown hover:text-black font-sans text-md">
+        </form>
+      </section>
+      <!-- end of registration form -->
+      <section class="login-form ml-3 ">
+        <form action="" class="flex flex-col font-sans text-xs gap-3 mb-1">
+          <label for="email">EMAIL ADDRESS</label>
+          <input type="email" name="email" id="EMAIL" placeholder="YOU@GMAIL.COM" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+          <label for="password">PASSWORD</label>
+          <input type="password" name="password" id="PASSWORD" placeholder="********" class="bg-light_grey p-4 placeholder:text-slate outline-none mb-3 font-sans text-xs">
+          <input type="submit" value="LOGIN" class="bg-black p-5 text-white hover:bg-light_brown hover:text-black font-sans text-xs">
+        </form>
+        <input type="button" class="reset text-sm font-mono cursor-pointer uppercase bg-transparent " value="RESET YOUR PASSWORD">
+      </section>
+    </aside>
+    <!-- end of user registration -->
+    <aside class="mobile-navigation ">
+      <div class="search flex justify-center items-center">
+          <img src="/assets/Search.svg" alt="search bar" width="25" height="25" class="search-sym">
+          <input type="text" class="main-search" placeholder="SEARCH"></input>
+      </div>
+      <nav >
+          <ul>
+              <li class="shop font-thin"><a href="">SHOP</a>
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M16.5303 8.96967C16.8232 9.26256 16.8232 9.73744 16.5303 10.0303L12.5303 14.0303C12.2374 14.3232 11.7626 14.3232 11.4697 14.0303L7.46967 10.0303C7.17678 9.73744 7.17678 9.26256 7.46967 8.96967C7.76256 8.67678 8.23744 8.67678 8.53033 8.96967L12 12.4393L15.4697 8.96967C15.7626 8.67678 16.2374 8.67678 16.5303 8.96967Z" fill="black"/>
+                  </svg>     
+          </li>
+          <li><a href="About.html">ABOUT</a></li>
+          <li><a href="contact.html">CONTACT</a></li>
+      </ul>
+      <ol class="collections cursor-pointer">
+          <li class=""><a >shirts</a></li>
+          <li class=""><a >Bottoms</a></li>
+          <li class=""><a >Outwear</a></li>
+          <li class=""><a >Knits</a></li>
+          <!-- <li class=""><a >Accessories</a></li> -->
+          <li class=""><a >Denim</a></li>
+          <li class=""><a >sweaters</a></li>
+          <li class=""><a >footwear</a></li>
+      </ol>
+      </nav>
+  </aside>
+  <!-- end of mobile navigation -->
+  <!-- Main starts here -->
+  <div class="main-container h-auto w-screen">
+    <header class="header flex flex-row justify-between items-center px-5 h-16 text-white gap-4 fixed top-0 w-full z-10 bg-black" >
+      <nav class="nav hidden md:flex flex-row gap-5 h-6 align-text-bottom">
+          <a href="shop.html "   class="">SHOP</a>
+          <a href="About.html"   class="">ABOUT</a>
+          <a href="contact.html" class="">CONTACT</a>
+      </nav>
+      
+      <div id="logo">
+          <h3 class="text-lg font-nunito md:text-2xl gradient-color"><a href="/HTML/index1.html">BLACK MARKET</a>
+            </h3>
+      </div>
+      <div class="header-features flex flex-row gap-5 items-center justify-end max-[600px]:gap-3">
+          <div class="search hidden md:flex flex-row gap-1 items-center ">
+              <img src="/assets/free_icon_1.svg" alt="search bar" class=" h-5 w-5 " >
+              <input type="text" class="main-search bg-transparent border-b w-28 outline-none"></input>
+          </div>
+          <div class="account" >
+              <img src="/assets/account-new.svg" alt="account" class="w-5 h-5">
+          </div>
+          <div class="cart">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19.1477 5.25H5.33514L4.15497 3.1346C4.0225 2.89715 3.7719 2.75 3.5 2.75H2C1.58579 2.75 1.25 3.08579 1.25 3.5C1.25 3.91421 1.58579 4.25 2 4.25H3.0596L4.22429 6.33765L6.91037 12.2809L6.91312 12.2869L7.14971 12.8104L4.45287 15.687C4.25895 15.8939 4.19825 16.1924 4.29599 16.4585C4.39372 16.7247 4.63317 16.913 4.91646 16.9452L7.37299 17.2261C10.4477 17.5775 13.5524 17.5775 16.627 17.2261L19.0852 16.9452C19.4967 16.8981 19.7922 16.5264 19.7452 16.1164C19.6981 15.7033 19.3264 15.4078 18.9149 15.4549L16.4567 15.7358C13.4952 16.0742 10.5064 16.0742 7.54331 15.7358L6.56779 15.6243L8.54717 13.513C8.56632 13.4925 8.5841 13.4713 8.60052 13.4494L9.35334 13.5474C10.4083 13.6847 11.4746 13.7116 12.5351 13.6277C15.0086 13.4321 17.301 12.2551 18.9015 10.3591L19.4795 9.67425C19.499 9.65125 19.517 9.62711 19.5335 9.60194L20.6109 7.96009C21.3745 6.79633 20.5397 5.25 19.1477 5.25Z" fill="white"/>
+              <path d="M6.5 18.5C5.67157 18.5 5 19.1716 5 20C5 20.8284 5.67157 21.5 6.5 21.5C7.32843 21.5 8 20.8284 8 20C8 19.1716 7.32843 18.5 6.5 18.5Z" fill="white"/>
+              <path d="M16 20C16 19.1716 16.6716 18.5 17.5 18.5C18.3284 18.5 19 19.1716 19 20C19 20.8284 18.3284 21.5 17.5 21.5C16.6716 21.5 16 20.8284 16 20Z" fill="white"/>
+              </svg>              
+          </div>
+          <div class="navbar md:hidden">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.75 12C19.75 11.5858 19.4142 11.25 19 11.25H5C4.58579 11.25 4.25 11.5858 4.25 12C4.25 12.4142 4.58579 12.75 5 12.75H19C19.4142 12.75 19.75 12.4142 19.75 12Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.75 7C19.75 6.58579 19.4142 6.25 19 6.25H5C4.58579 6.25 4.25 6.58579 4.25 7C4.25 7.41421 4.58579 7.75 5 7.75H19C19.4142 7.75 19.75 7.41421 19.75 7Z" fill="white"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M19.75 17C19.75 16.5858 19.4142 16.25 19 16.25H5C4.58579 16.25 4.25 16.5858 4.25 17C4.25 17.4142 4.58579 17.75 5 17.75H19C19.4142 17.75 19.75 17.4142 19.75 17Z" fill="white"/>
+            </svg>
+          </div>
+      </div>
+  </header>
+  <!-- End of Header -->
+  <section class="shop-items flex flex-row  my-16 bg-black md:flex-col">
+    <section class="carousal-container  w-1/2 group">
+        <div class="carousel flex flex-row  w-full">
+          <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_001_828x.progressive.webp" class="slide" alt="shirt image">
+          <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_002_828x.progressive.webp" class="slide" alt="shirt image">
+          <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_003_828x.progressive.webp" class="slide" alt="shirt image">
+          <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_004_828x.progressive.webp" class="slide" alt="shirt image">
+          <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_005_828x.progressive.webp" class="slide" alt="shirt image">
+          <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_006_828x.progressive.webp" class="slide" alt="shirt image" srcset="">
+          <button class="next flex justify-end items-center text-3xl text-light_grey h-full w-1/3 font-thin opacity-0 transition-opacity group-hover:opacity-100">
+            <svg width="54" height="80" viewBox="0 0 54 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-180">
+            <g clip-path="url(#clip0_105_2)">
+            <path d="M0.900049 54.3C1.70005 53.5 2.50005 52.7 3.30005 51.8C6.10005 48.9 8.90005 46 11.7 43.1C20.4 34.1 29.1 25.1 37.8 16.1C42.9 10.8 48 5.49996 53.1 0.199955C53.6 -0.300045 54.2 0.499955 53.8 0.899955C53.6 1.09995 53.5 1.29995 53.3 1.39995C52.5 2.29995 51.6 3.09995 50.8 3.99995C47.6 7.29995 44.4001 10.6 41.2001 14C32.5001 23 23.8 32.1 15 41.1C11.6 44.6 8.20005 48.1 4.80005 51.6C3.80005 52.6 2.80005 53.6 1.80005 54.7C1.60005 54.9 1.40005 55.2 1.10005 55.5C1.20005 55.6 1.30005 55.8 1.50005 55.9C2.40005 56.8 3.30005 57.7 4.10005 58.6C7.30005 62 10.6 65.3 13.8 68.7C22.5 77.7 31.2 86.8 40 95.8C43.3 99.3 46.7 102.7 50 106.2C51 107.2 51.9001 108.2 52.9001 109.2C53.0001 109.3 53.8001 110 53.9001 110.5C53.9001 110.6 53.9001 110.7 53.9001 110.8C53.8001 110.9 53.7001 111 53.4001 111C53.0001 111 52.5001 110.2 52.2001 110C51.4001 109.1 50.6001 108.3 49.7001 107.4C46.8001 104.4 44 101.5 41.1 98.5C32.4 89.5 23.7 80.4 15 71.4C10 66.2 5.00005 61 4.88311e-05 55.8C4.88311e-05 55.8 4.88311e-05 55.7 -0.0999512 55.7C-0.0999512 55.7 -0.199951 55.7 -0.199951 55.6V55.5C-0.199951 55.4 -0.199951 55.4 -0.199951 55.3C-0.199951 55.3 -0.199951 55.3 -0.199951 55.2C0.200049 55 0.800049 54.5 0.900049 54.3Z" fill="white"/>
+            </g>
+            <defs>
+            <clipPath id="clip0_105_2">
+            <rect width="54" height="111.1" fill="white"/>
+            </clipPath>
+            </defs>
+            </svg>
+            </button>
+          <button class="prev text-3xl text-light_grey font-thin h-full w-1/3 opacity-0 transition-opacity duration-700 ease-in-out delay-75 group-hover:opacity-100">
+            <svg width="54" height="80" viewBox="0 0 54 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="">
+              <g clip-path="url(#clip0_105_2)">
+              <path d="M0.900049 54.3C1.70005 53.5 2.50005 52.7 3.30005 51.8C6.10005 48.9 8.90005 46 11.7 43.1C20.4 34.1 29.1 25.1 37.8 16.1C42.9 10.8 48 5.49996 53.1 0.199955C53.6 -0.300045 54.2 0.499955 53.8 0.899955C53.6 1.09995 53.5 1.29995 53.3 1.39995C52.5 2.29995 51.6 3.09995 50.8 3.99995C47.6 7.29995 44.4001 10.6 41.2001 14C32.5001 23 23.8 32.1 15 41.1C11.6 44.6 8.20005 48.1 4.80005 51.6C3.80005 52.6 2.80005 53.6 1.80005 54.7C1.60005 54.9 1.40005 55.2 1.10005 55.5C1.20005 55.6 1.30005 55.8 1.50005 55.9C2.40005 56.8 3.30005 57.7 4.10005 58.6C7.30005 62 10.6 65.3 13.8 68.7C22.5 77.7 31.2 86.8 40 95.8C43.3 99.3 46.7 102.7 50 106.2C51 107.2 51.9001 108.2 52.9001 109.2C53.0001 109.3 53.8001 110 53.9001 110.5C53.9001 110.6 53.9001 110.7 53.9001 110.8C53.8001 110.9 53.7001 111 53.4001 111C53.0001 111 52.5001 110.2 52.2001 110C51.4001 109.1 50.6001 108.3 49.7001 107.4C46.8001 104.4 44 101.5 41.1 98.5C32.4 89.5 23.7 80.4 15 71.4C10 66.2 5.00005 61 4.88311e-05 55.8C4.88311e-05 55.8 4.88311e-05 55.7 -0.0999512 55.7C-0.0999512 55.7 -0.199951 55.7 -0.199951 55.6V55.5C-0.199951 55.4 -0.199951 55.4 -0.199951 55.3C-0.199951 55.3 -0.199951 55.3 -0.199951 55.2C0.200049 55 0.800049 54.5 0.900049 54.3Z" fill="white"/>
+              </g>
+              <defs>
+              <clipPath id="clip0_105_2">
+              <rect width="54" height="111.1" fill="white"/>
+              </clipPath>
+              </defs>
+              </svg>
+          </button>
+        </div>
+        
+    </section>
+    <section class="shop-item-des bg-black w-1/2"></section>
+  </section>
+  </div>
+  <script src="/JavaScript/app.js" type="module"></script>
+  <script src="/JavaScript/item.js"></script>
+</body>
 </html>

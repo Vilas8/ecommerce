@@ -2369,6 +2369,84 @@
                     "price": "$38"
                 }
             ]
+        },
+        "sweaters": {
+            "headerImageLink": "/ProductAssets/banner/Mens_-_Sweater_2048x2048.progressive.jpg",
+            "headerProduct": "Men's Sweaters",
+            "itemList": [
+                {
+                    "id": 1,
+                    "src": "/ProductAssets/sweater/1M1165_Moor_Sweater_Slate_a_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/1M1165_Moor_Sweater_Slate_a_002_530x.progressive.jpg",
+                    "title": "The Bryan Pullover Sweater",
+                    "subtitle": "in Flax Melange",
+                    "price": "$168"
+                },
+                {
+                    "id": 2,
+                    "src": "/ProductAssets/sweater/1M1165_Moor_Sweater_Steeple_Grey_a_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/1M1165_Moor_Sweater_steeple_Grey_002_a_002_530x.progressive.jpg",
+                    "title": "The Charleston Sweater",
+                    "subtitle": "in Heather Charcoal",
+                    "price": "$198"
+                },
+                {
+                    "id": 3,
+                    "src": "/ProductAssets/sweater/1M1262_Bryan_Pullover_Sweater_Flax_Melange_a_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/1M1262_Bryan_Pullover_Sweater_Flax_Melange_e_530x.progressive.jpg",
+                    "title": "The Orr Sweater",
+                    "subtitle": "in Dried Acorn",
+                    "price": "$188"
+                },
+                {
+                    "id": 4,
+                    "src": "/ProductAssets/sweater/instock_m_q123_Charleston_Sweater_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/instock_m_q123_Charleston_Sweater_002_530x.progressive.jpg",
+                    "title": "The Moor Sweater",
+                    "subtitle": "in Slate",
+                    "price": "$168"
+                },
+                {
+                    "id": 5,
+                    "src": "/ProductAssets/sweater/instock_m_q123_Crawford_BlueMelange_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/instock_m_q123_Crawford_BlueMelange_002_530x.progressive.jpg",
+                    "title": "The Moor Sweater",
+                    "subtitle": "in Steeple Grey",
+                    "price": "$168"
+                },
+                {
+                    "id": 6,
+                    "src": "/ProductAssets/sweater/instock_m_q123_OrrSweater_Acorn_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/instock_m_q123_OrrSweater_Acorn_002_530x.progressive.jpg",
+                    "title": "The Crawford Sweater",
+                    "subtitle": "in Blue Melange",
+                    "price": "$178"
+                },
+                {
+                    "id": 7,
+                    "src": "/ProductAssets/sweater/instock_m_q322_EverttSweater-Navy_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/instock_m_q322_EverttSweater-Navy_002_530x.progressive.jpg",
+                    "title": "The Hudson Sweater",
+                    "subtitle": "in Heather Green",
+                    "price": "$168"
+                },
+                {
+                    "id": 8,
+                    "src": "/ProductAssets/sweater/instock_m_q322_HudsonSweater-HeatherGreen_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/instock_m_q322_HudsonSweater-HeatherGreen_003_530x.progressive.jpg",
+                    "title": "The Everett Sweater",
+                    "subtitle": "in Navy Birdseye",
+                    "price": "$178"
+                },
+                {
+                    "id": 9,
+                    "src": "/ProductAssets/sweater/instock_m_q422_Magnus_Sweater_Natural_001_530x.progressive.jpg",
+                    "src2": "/ProductAssets/sweater/instock_m_q422_Magnus_Sweater_Natural_002_530x.progressive.jpg",
+                    "title": "The Magnus Sweater",
+                    "subtitle": "in Natural",
+                    "price": "$188"
+                }
+            ]
         }
     }
 }

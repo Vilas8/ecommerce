@@ -21,6 +21,9 @@ const register = document.querySelector('.register');
 // product navigation
 const collectionsList = document.querySelector(".collections").querySelectorAll("li")
 
+// path
+const path1 = '/HTML/product.html';
+const path2 = '/HTML/index1.html';
 
 // random javascript code
 let count = 1;
@@ -40,23 +43,25 @@ function changeContent(){
 let dis = 0;
 
 // adding background color to navbar while scrolling.
-
-window.addEventListener("scroll", function(){
-    let scrHeight = window.scrollY;
-    let header = document.querySelector('.header')
-    let logo = this.document.querySelector('#logo').querySelector('h3');
-    
-    if (scrHeight > 200){
-        header.style.background="black";
-        logo.classList.add('gradient-color');
+if (window.location === path1 || window.location === path2){
+    window.addEventListener("scroll", function(){
+        let scrHeight = window.scrollY;
+        let header = document.querySelector('.header')
+        let logo = this.document.querySelector('#logo').querySelector('h3');
         
-    }
-    else {
-        header.style.background="initial";
-        logo.classList.remove("gradient-color");
-    }
- 
-});
+        if (scrHeight > 200){
+            header.style.background="black";
+            logo.classList.add('gradient-color');
+            
+        }
+        else {
+            header.style.background="initial";
+            logo.classList.remove("gradient-color");
+        }
+     
+    });
+}
+
 
 const shopFunction =  (e) => {
     if(count == 1){
