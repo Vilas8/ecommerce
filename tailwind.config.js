@@ -30,6 +30,10 @@ module.exports = {
       maxWidth: {
         "64": "20rem"
       }
+      ,
+      maxHeight:{
+        "82": "32rem"
+      }
     },
   },
   plugins: [],

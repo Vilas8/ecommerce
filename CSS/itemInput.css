@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.main-container {
+    height: auto;
+    width: 100vw;
+}
+
+.shop-items {
+    height: 600px;
+}
+
+.carousel {
+    width: 100%;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    cursor: pointer;
+    padding: 10px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+.prev {
+    left: 4px;
+}
+
+.next {
+    right: 0;
+}
