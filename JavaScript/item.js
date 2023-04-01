@@ -1,9 +1,14 @@
 const carousal = document.querySelector(".carousel");
 const prev = document.querySelector(".prev");
 const next = document.querySelector(".next");
+const dropdown = document.querySelector(".dropdown-btn");
+const dropContent = document.querySelector(".dropdown-content");
+const dropItems = document.querySelector(".drop-list").querySelectorAll("li");
+console.log(dropItems);
 
 let timer;
 let slideIndex = 0;
+let clickCount = 0;
 let slides = document.querySelectorAll('.slide');
 
 
@@ -20,7 +25,6 @@ const showSlides = () =>{
   }
   slides[slideIndex].classList.add("active");
   
-  console.log(slideIndex);
   slideIndex++;
 }
 
@@ -34,6 +38,46 @@ const prevSlide = () => {
 
 const nextSlide = () => {
     showSlides();
+}
+
+//dropdown functions
+
+function hideDropDown(){
+  dropContent.classList.add("hidden");
+  dropdown.classList.add("box-shadow");
+  dropdown.classList.add("border");
+}
+
+
+const showMenu = (e) =>{
+    if(clickCount === 0){
+      dropContent.classList.remove("hidden");
+      dropdown.classList.remove("box-shadow");
+      dropdown.classList.remove("border");
+    }
+    else {
+      hideDropDown();
+    }
+
+    clickCount = (clickCount === 0)? 1:0;
+}
+
+
+const changeSize = (e) => {
+   dropItems.forEach(item => {
+      item.classList.remove("active-size");
+   })
+
+   if(e.target.innerHTML !== "SELECT SIZE"){
+        let size = e.target.innerHTML;
+        e.target.classList.add("active-size");
+        dropdown.children[0].innerHTML = size;
+        dropContent.classList.add('hidden');
+        hideDropDown();
+        clickCount = 0;
+
+   }
+   
 }
 
 
@@ -50,3 +94,10 @@ carousal.addEventListener("mouseleave", () => {
 
 prev.addEventListener("click", prevSlide);
 next.addEventListener("click", nextSlide);
+
+
+dropdown.addEventListener("click", showMenu);
+
+dropItems.forEach((item) => {
+      item.addEventListener("click", changeSize);
+})
