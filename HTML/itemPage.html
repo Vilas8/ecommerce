@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/CSS/item.css" />
-    <link rel="stylesheet" href="/CSS/product.css">
     <title>item</title>
   </head>
   <body>
@@ -113,7 +112,7 @@
       </div>
   </header>
   <!-- End of Header -->
-  <section class="shop-items flex flex-col gap-4 h-fit pt-16 bg-black md:flex-row ">
+  <section class="shop-items flex flex-col items-center gap-4 py-16 bg-black md:flex-row ">
     <section class="carousal-container  w-full group md:w-1/2">
         <div class="carousel flex flex-row  w-full ">
           <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_001_828x.progressive.webp" class="slide" alt="shirt image">
@@ -123,7 +122,7 @@
           <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_005_828x.progressive.webp" class="slide" alt="shirt image">
           <img src="/ItemAssets/item-shirts/instock_m_q123_SS_California_NavyCrackle_006_828x.progressive.webp" class="slide" alt="shirt image" srcset="">
           <button class="next flex justify-end items-center text-3xl text-light_grey h-full w-1/3 font-thin opacity-0 transition-opacity group-hover:opacity-100">
-            <svg width="24" height="80" viewBox="0 0 54 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-180 h-10 sm:h-20">
+            <svg width="24" height="80" viewBox="0 0 54 112" fill="none" xmlns="http://www.w3.org/2000/svg" class="rotate-180 h-10 sm:h-20 ">
             <g clip-path="url(#clip0_105_2)">
             <path d="M0.900049 54.3C1.70005 53.5 2.50005 52.7 3.30005 51.8C6.10005 48.9 8.90005 46 11.7 43.1C20.4 34.1 29.1 25.1 37.8 16.1C42.9 10.8 48 5.49996 53.1 0.199955C53.6 -0.300045 54.2 0.499955 53.8 0.899955C53.6 1.09995 53.5 1.29995 53.3 1.39995C52.5 2.29995 51.6 3.09995 50.8 3.99995C47.6 7.29995 44.4001 10.6 41.2001 14C32.5001 23 23.8 32.1 15 41.1C11.6 44.6 8.20005 48.1 4.80005 51.6C3.80005 52.6 2.80005 53.6 1.80005 54.7C1.60005 54.9 1.40005 55.2 1.10005 55.5C1.20005 55.6 1.30005 55.8 1.50005 55.9C2.40005 56.8 3.30005 57.7 4.10005 58.6C7.30005 62 10.6 65.3 13.8 68.7C22.5 77.7 31.2 86.8 40 95.8C43.3 99.3 46.7 102.7 50 106.2C51 107.2 51.9001 108.2 52.9001 109.2C53.0001 109.3 53.8001 110 53.9001 110.5C53.9001 110.6 53.9001 110.7 53.9001 110.8C53.8001 110.9 53.7001 111 53.4001 111C53.0001 111 52.5001 110.2 52.2001 110C51.4001 109.1 50.6001 108.3 49.7001 107.4C46.8001 104.4 44 101.5 41.1 98.5C32.4 89.5 23.7 80.4 15 71.4C10 66.2 5.00005 61 4.88311e-05 55.8C4.88311e-05 55.8 4.88311e-05 55.7 -0.0999512 55.7C-0.0999512 55.7 -0.199951 55.7 -0.199951 55.6V55.5C-0.199951 55.4 -0.199951 55.4 -0.199951 55.3C-0.199951 55.3 -0.199951 55.3 -0.199951 55.2C0.200049 55 0.800049 54.5 0.900049 54.3Z" fill="black"/>
             </g>
@@ -149,7 +148,7 @@
         </div>
     </section>
     <!-- End of carousal -->
-    <section class="shop-item-des py-10 bg-black w-full flex flex-col align-center items-center text-white md:w-1/2">
+    <section class="shop-item-des py-10 bg-black w-full flex flex-col  align-center items-center text-white md:w-1/2 md:p-0">
       <div class="heading-price flex flex-col items-center w-3/4 max-w-xl">
         <h3 class="stock uppercase font-nunito text-sm text-center">in stock</h3>
         <div class="review-stars flex flex-row w-fit group">
@@ -200,12 +199,17 @@
         </fieldset>
         <button class="add-to-cart-btn w-full p-2 mt-2 text-black bg-white font-nunito text-xs font-semibold hover:bg-light_brown transition-colors ease-in hover:text-white uppercase ">add to cart</button>
       </form>
-    
     </div>
-
-      
-      
     </section>
+  </section>
+  <!-- end of carousel and add to cart section -->
+  <section class="item-extra-info flex flex-row flex-wrap ">
+    <section class="description font-nunito">
+      <header class="uppercase">description</header>
+      <p class="des">Durable, comfortable, and decidedly laid-back, The Pack Pant in Coal Fleece is designed to tackle any adventure. As part of our Party Wave collection created in collaboration with Magic Seaweed, we’ve designed these fleece bottoms to wear well from the cold New England coast to a night surf in the Pacific. But even if you’ve never touched a surfboard, the cozy fleece construction, handy built-in belt and deep patch pockets are a functional addition to just about any outfit</p>
+    </section>
+    <section class="specifications"></section>
+    <section class="material"></section>
   </section>
   <!-- 
         footer starts here 
