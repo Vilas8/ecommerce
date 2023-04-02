@@ -376,3 +376,18 @@ html {
 .image-wrapper:hover img:last-child {
     opacity: 1;
 }
+
+.item-extra-info {
+    background-color: #070707dc;
+    --w1: 800px;
+    --w2: 640px;
+    --N: 3;
+    --M: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(clamp(100%/(var(--N) + 1) + 0.1%, (var(--w1) - 100vw)*1000, 100%/(var(--M) + 1) + 0.1%), (var(--w2) - 100vw)*1000, 100%), 1fr));
+    gap: 40px;
+}
+
+.text-13 {
+    font-size: 13px;
+}

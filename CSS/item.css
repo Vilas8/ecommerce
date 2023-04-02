@@ -608,6 +608,10 @@ video {
   margin-left: 0.75rem;
 }
 
+.ml-5 {
+  margin-left: 1.25rem;
+}
+
 .mr-5 {
   margin-right: 1.25rem;
 }
@@ -755,6 +759,10 @@ video {
   cursor: pointer;
 }
 
+.list-disc {
+  list-style-type: disc;
+}
+
 .list-none {
   list-style-type: none;
 }
@@ -769,10 +777,6 @@ video {
 
 .flex-col {
   flex-direction: column;
-}
-
-.flex-wrap {
-  flex-wrap: wrap;
 }
 
 .items-center {
@@ -873,6 +877,11 @@ video {
   padding: 1.25rem;
 }
 
+.px-12 {
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
@@ -888,14 +897,19 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-2 {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .py-16 {
   padding-top: 4rem;
   padding-bottom: 4rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .pb-3 {
@@ -912,10 +926,6 @@ video {
 
 .pr-5 {
   padding-right: 1.25rem;
-}
-
-.pt-16 {
-  padding-top: 4rem;
 }
 
 .pt-2 {
@@ -985,6 +995,10 @@ video {
   line-height: 1rem;
 }
 
+.font-bold {
+  font-weight: 700;
+}
+
 .font-medium {
   font-weight: 500;
 }
@@ -1003,6 +1017,10 @@ video {
 
 .uppercase {
   text-transform: uppercase;
+}
+
+.leading-6 {
+  line-height: 1.5rem;
 }
 
 .tracking-wide {
@@ -1462,6 +1480,21 @@ html {
   opacity: 1;
 }
 
+.item-extra-info {
+  background-color: #070707dc;
+  --w1: 800px;
+  --w2: 640px;
+  --N: 3;
+  --M: 2;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(clamp(100%/(var(--N) + 1) + 0.1%, (var(--w1) - 100vw)*1000, 100%/(var(--M) + 1) + 0.1%), (var(--w2) - 100vw)*1000, 100%), 1fr));
+  gap: 40px;
+}
+
+.text-13 {
+  font-size: 13px;
+}
+
 .placeholder\:font-mono::-moz-placeholder {
   font-family: SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace;
 }
@@ -1578,10 +1611,6 @@ html {
     height: fit-content;
   }
 
-  .md\:h-40 {
-    height: 10rem;
-  }
-
   .md\:w-1\/2 {
     width: 50%;
   }
@@ -1607,11 +1636,5 @@ html {
 @media (min-width: 1024px) {
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
-}
-
-@media (min-width: 1536px) {
-  .\32xl\:h-40 {
-    height: 10rem;
   }
 }
