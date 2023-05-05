@@ -24,7 +24,8 @@ module.exports = {
       yellow: "yellow",
       transparent: "transparent",
       light_grey: "rgb(221, 221, 221)",
-      light_brown: "#b5aa8f"
+      light_brown: "#b5aa8f",
+      grey: "rgb(221, 221, 221)"
     },
     extend: {
       maxWidth: {
@@ -32,7 +33,8 @@ module.exports = {
       }
       ,
       maxHeight:{
-        "82": "32rem"
+        "82": "32rem",
+        "96": "46rem"
       }
     },
   },
