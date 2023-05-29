@@ -43,7 +43,7 @@ function changeContent(){
 let dis = 0;
 
 // adding background color to navbar while scrolling.
-if (window.location === path1 || window.location === path2){
+if (window.location.pathname === path1 || window.location.pathname === path2){
     window.addEventListener("scroll", function(){
         let scrHeight = window.scrollY;
         let header = document.querySelector('.header')
